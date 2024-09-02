@@ -26,7 +26,7 @@
 /* Campo de formulario */
 .p-field {
   margin-bottom: 1rem;
-  width: 90%; /* Asegura que el campo ocupe todo el ancho disponible */
+  width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
 }
 
 /* Etiqueta */
