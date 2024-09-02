@@ -4,6 +4,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+//mocks
+import { aprovisionamiento } from '../../app/utils/mocks/aprovisionamiento';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
@@ -16,33 +18,105 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class FormularioComponent implements OnInit {
   sostenibilidadForm!: FormGroup;
 
-  indicadoresBloque1 = [
-    {
-      name: 'campo1_b1',
-      label: '1. CERTIFICADO DE PRODUCCIÓN ECOLÓGICA',
-      labelsecond: '¿Hay alimentos de producción ecologica en el menú?',
-      options: [
-        { label: 'Ningún pescado utilizado en el menú está asociado a algún certificado de calidad', value: 'nivel1' },
-        { label: 'Al menos el 5% de los pescados servidos en el menú tienen algún certificado de calidad', value: 'nivel2' },
-        { label: 'Al menos el 20% de los pescados del menú tienen algún certificado de calidad', value: 'nivel3' },
-        { label: 'Al menos el 35% de los pescados del menú tienen algún certificado de calidad', value: 'nivel4' },
-        { label: 'Más del 50% del pescado utilizado en el menú está asociado a algún certificado de calidad', value: 'nivel5' }
-      ]
-    },
-    {
-      name: 'campo2_b1',
-      label: '2. COMPROMISO CON LA GANADERIA EXTENSIVA',
-      labelsecond: '¿Los alimentos de origen animal proceden de ganadería extensiva?',
-      options: [
-        { label: 'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa', value: 'nivel1' },
-        { label: 'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel2' },
-        { label: 'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel3' },
-        { label: 'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel4' },
-        { label: 'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa', value: 'nivel5' }
-      ]
-    },
-    // Agrega los otros campos de manera similar
-  ];
+  aprovisionamiento = aprovisionamiento;
+  //   {
+  //     name: 'campo1_b1',
+  //     label: '1. CERTIFICADO DE PRODUCCIÓN ECOLÓGICA',
+  //     labelsecond: '¿Hay alimentos de producción ecologica en el menú?',
+  //     options: [
+  //       { label: 'Ningún pescado utilizado en el menú está asociado a algún certificado de calidad', value: 'nivel1' },
+  //       { label: 'Al menos el 5% de los pescados servidos en el menú tienen algún certificado de calidad', value: 'nivel2' },
+  //       { label: 'Al menos el 20% de los pescados del menú tienen algún certificado de calidad', value: 'nivel3' },
+  //       { label: 'Al menos el 35% de los pescados del menú tienen algún certificado de calidad', value: 'nivel4' },
+  //       { label: 'Más del 50% del pescado utilizado en el menú está asociado a algún certificado de calidad', value: 'nivel5' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'campo2_b1',
+  //     label: '2. COMPROMISO CON LA GANADERIA EXTENSIVA',
+  //     labelsecond: '¿Los alimentos de origen animal proceden de ganadería extensiva?',
+  //     options: [
+  //       { label: 'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa', value: 'nivel1' },
+  //       { label: 'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel2' },
+  //       { label: 'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel3' },
+  //       { label: 'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel4' },
+  //       { label: 'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa', value: 'nivel5' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'campo2_b1',
+  //     label: '3. CERTIFICADO DE PESCA SOSTENIBLE ',
+  //     labelsecond: '¿EL pescado procede de pesca sostenible?',
+  //     options: [
+  //       { label: 'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa', value: 'nivel1' },
+  //       { label: 'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel2' },
+  //       { label: 'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel3' },
+  //       { label: 'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel4' },
+  //       { label: 'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa', value: 'nivel5' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'campo2_b1',
+  //     label: '4. PRODUCTOS DE COMERCIO JUSTO / INICIATIVA COOPERATIVA  ',
+  //     labelsecond: '¿Consumís productos de comercio justo o de iniciativas de economía cooperativa?',
+  //     options: [
+  //       { label: 'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa', value: 'nivel1' },
+  //       { label: 'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel2' },
+  //       { label: 'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel3' },
+  //       { label: 'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel4' },
+  //       { label: 'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa', value: 'nivel5' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'campo2_b1',
+  //     label: '5. DENOMINACIONES DOP/IGP   ',
+  //     labelsecond: '¿Consumís productos de comercio justo o de iniciativas de economía cooperativa?',
+  //     options: [
+  //       { label: 'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa', value: 'nivel1' },
+  //       { label: 'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel2' },
+  //       { label: 'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel3' },
+  //       { label: 'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel4' },
+  //       { label: 'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa', value: 'nivel5' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'campo2_b1',
+  //     label: '6. TERRITORIALIDAD DE LOS ALIMENTOS',
+  //     labelsecond: '¿Dónde se producen los alimentos que compráis?',
+  //     options: [
+  //       { label: 'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa', value: 'nivel1' },
+  //       { label: 'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel2' },
+  //       { label: 'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel3' },
+  //       { label: 'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel4' },
+  //       { label: 'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa', value: 'nivel5' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'campo2_b1',
+  //     label: '7. ESTACIONALIDAD DEL ALIMENTO ',
+  //     labelsecond: '¿Consumís alimentos de temporada?',
+  //     options: [
+  //       { label: 'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa', value: 'nivel1' },
+  //       { label: 'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel2' },
+  //       { label: 'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel3' },
+  //       { label: 'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel4' },
+  //       { label: 'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa', value: 'nivel5' }
+  //     ]
+  //   },
+  //   {
+  //     name: 'campo2_b1',
+  //     label: '8. FRESCURA DE LOS ALIMENTOS    ',
+  //     labelsecond: '¿Consumís alimentos frescos?',
+  //     options: [
+  //       { label: 'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa', value: 'nivel1' },
+  //       { label: 'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel2' },
+  //       { label: 'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel3' },
+  //       { label: 'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa', value: 'nivel4' },
+  //       { label: 'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa', value: 'nivel5' }
+  //     ]
+  //   },
+  //   // Agrega los otros campos de manera similar
+  // ];
 
   indicadoresBloque2 = [
     { name: 'campo1_b2', label: '9. CANTIDAD DE ENVASES Y EMBALAJES ', labelsecond:'' ,options: this.createOptions() },
@@ -67,7 +141,7 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
     this.sostenibilidadForm = this.fb.group({});
-    this.addControls(this.indicadoresBloque1);
+    this.addControls(this.aprovisionamiento);
     this.addControls(this.indicadoresBloque2);
     this.addControls(this.indicadoresBloque3);
   }
