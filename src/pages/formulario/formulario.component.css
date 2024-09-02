@@ -2,7 +2,9 @@
 .card{
   display: flex;
   justify-content: center;
-  padding:10px
+  padding:10px;
+  border: 1px solid rgb(95, 93, 93);
+  margin: 5px;
 }
 .section {
   margin-bottom: 2rem;
