@@ -1,7 +1,7 @@
 
 .main {
     flex: 1; /* Permite que .main ocupe todo el espacio disponible */
-    padding: 16px;
+    padding: 8px;
     max-width: 1200px; /* Ancho máximo para pantallas grandes */
     min-width: 820px;  /* Ancho mínimo para dispositivos pequeños */
     min-height: 480px;
@@ -11,7 +11,7 @@
 /* Estilos para dispositivos móviles */
 @media (max-width: 600px) {
     .main {
-        padding: 8px; /* Reducir el padding en pantallas pequeñas */
+        padding: 2px; /* Reducir el padding en pantallas pequeñas */
         min-width: 480px; /* Ajuste del ancho mínimo en móviles */
     }
 }

@@ -1,0 +1,84 @@
+/* Contenedor de cada sección para que sea flexible y ocupe el ancho completo */
+.section {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado de la sección */
+.section-header {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
+}
+
+/* Campo de formulario */
+.p-field {
+  margin-bottom: 1rem;
+  width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
+}
+
+/* Etiqueta */
+label {
+  display: block;
+  margin-bottom: 0.5rem; /* Espacio entre el texto y el campo de selección */
+  width: 100%; /* Asegura que la etiqueta ocupe todo el ancho disponible */
+}
+
+/* Dropdown */
+p-dropdown {
+  width: 100%; /* Asegura que el campo de selección ocupe todo el ancho disponible */
+}
+
+/* Botón */
+button {
+  margin-top: 1rem;
+  width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+  .section {
+    padding: 0 1rem; /* Añade padding horizontal en pantallas pequeñas */
+  }
+
+  label {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
+  }
+
+  p-dropdown {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
+  }
+
+  button {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    padding: 0.75rem; /* Ajusta el padding del botón para pantallas pequeñas */
+  }
+}
+
+/* Media queries para tablets */
+@media (max-width: 900px) and (min-width: 601px) {
+  .section {
+    padding: 0 2rem; /* Añade padding horizontal en pantallas medianas */
+  }
+
+  label {
+    font-size: 1rem; /* Tamaño de fuente ajustado para tablets */
+  }
+
+  p-dropdown {
+    font-size: 1rem; /* Tamaño de fuente ajustado para tablets */
+  }
+
+  button {
+    font-size: 1rem; /* Tamaño de fuente ajustado para tablets */
+    padding: 1rem; /* Ajusta el padding del botón para tablets */
+  }
+}
+
+
+

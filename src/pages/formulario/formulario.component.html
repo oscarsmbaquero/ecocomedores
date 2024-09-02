@@ -1,1 +1,87 @@
-<p>formulario works!</p>
+<form [formGroup]="sostenibilidadForm" (ngSubmit)="onSubmit()">
+    <div class="section">
+      <div class="section-header">
+        <h2>SOSTENIBILIDAD DE APROVISIONAMIENTO</h2>
+      </div>
+      <div *ngFor="let item of indicadoresBloque1" class="p-field">
+        <!-- Primera etiqueta -->
+        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
+        <!-- Segunda etiqueta -->
+        <label class="second-label">{{ item.labelsecond }}</label>
+        <!-- Campo de selección -->
+        <p-dropdown 
+          [options]="item.options" 
+          formControlName="{{ item.name }}" 
+          optionLabel="label" 
+          placeholder="Selecciona nivel" 
+          [style]="{'width':'100%'}"
+          class="full-width-dropdown"
+        ></p-dropdown>
+      </div>
+    </div>
+  
+    <div class="section">
+        <div class="section-header">
+        <h2>SOSTENIBILIDAD DE LA DISTRIBUCIÓN</h2>
+        </div>
+      <div *ngFor="let item of indicadoresBloque2" class="p-field">
+        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
+        <p-dropdown 
+          [options]="item.options" 
+          formControlName="{{ item.name }}" 
+          optionLabel="label" 
+          placeholder="Selecciona nivel" 
+          [style]="{'width':'100%'}"
+        ></p-dropdown>
+      </div>
+    </div>
+  
+    <div class="section">
+        <div class="section-header">
+            <h2>SOSTENIBILIDAD DEL PROCESO EN COCINA</h2>
+            </div>
+      <div *ngFor="let item of indicadoresBloque3" class="p-field">
+        <label>{{ item.label }}</label>
+        <p-dropdown 
+          [options]="item.options" 
+          formControlName="{{ item.name }}" 
+          optionLabel="label" 
+          placeholder="Selecciona nivel" 
+          [style]="{'width':'100%'}"
+        ></p-dropdown>
+      </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <h2>SOSTENIBILIDAD DEL CONSUMO EN COMEDOR</h2>
+            </div>
+      <div *ngFor="let item of indicadoresBloque3" class="p-field">
+        <label>{{ item.label }}</label>
+        <p-dropdown 
+          [options]="item.options" 
+          formControlName="{{ item.name }}" 
+          optionLabel="label" 
+          placeholder="Selecciona nivel" 
+          [style]="{'width':'100%'}"
+        ></p-dropdown>
+      </div>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <h2>SOSTENIBILIDAD DE LA GESTIÓN DE RESIDUOS</h2>
+            </div>
+      <div *ngFor="let item of indicadoresBloque3" class="p-field">
+        <label>{{ item.label }}</label>
+        <p-dropdown 
+          [options]="item.options" 
+          formControlName="{{ item.name }}" 
+          optionLabel="label" 
+          placeholder="Selecciona nivel" 
+          [style]="{'width':'100%'}"
+        ></p-dropdown>
+      </div>
+    </div>
+  
+    <button pButton type="submit" label="Enviar" [disabled]="!sostenibilidadForm.valid"></button>
+  </form>
+  
