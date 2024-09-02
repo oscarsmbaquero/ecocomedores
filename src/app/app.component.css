@@ -2,8 +2,7 @@
 .main {
     flex: 1; /* Permite que .main ocupe todo el espacio disponible */
     padding: 8px;
-    max-width: 1200px; /* Ancho máximo para pantallas grandes */
-    min-width: 820px;  /* Ancho mínimo para dispositivos pequeños */
+  
     min-height: 480px;
     margin: 0 auto; /* Centrar el contenido */
 }
@@ -12,16 +11,14 @@
 @media (max-width: 600px) {
     .main {
         padding: 2px; /* Reducir el padding en pantallas pequeñas */
-        min-width: 480px; /* Ajuste del ancho mínimo en móviles */
-    }
+       
 }
 
 /* Estilos para tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
     .main {
         padding: 12px; /* Ajustar el padding en tablets */
-        min-width: 680px; /* Ancho mínimo para tablets */
-    }
+            }
 }
 
 /* Estilos para pantallas grandes */
@@ -29,4 +26,5 @@
     .main {
         padding: 24px; /* Mayor padding en pantallas grandes */
     }
+}
 }

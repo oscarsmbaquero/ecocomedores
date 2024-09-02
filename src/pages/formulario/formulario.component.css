@@ -1,4 +1,9 @@
 /* Contenedor de cada sección para que sea flexible y ocupe el ancho completo */
+.card{
+  display: flex;
+  justify-content: center;
+  padding:10px
+}
 .section {
   margin-bottom: 2rem;
   display: flex;
@@ -10,7 +15,7 @@
   background-color: #4CAF50; /* Verde */
   color: white;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 12px;
   text-align: center;
   margin-bottom: 1rem;
   width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
@@ -19,7 +24,7 @@
 /* Campo de formulario */
 .p-field {
   margin-bottom: 1rem;
-  width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
+  width: 90%; /* Asegura que el campo ocupe todo el ancho disponible */
 }
 
 /* Etiqueta */
@@ -79,6 +84,7 @@ button {
     padding: 1rem; /* Ajusta el padding del botón para tablets */
   }
 }
+
 
 
 
