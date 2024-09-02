@@ -113,9 +113,7 @@ export class FormularioComponent implements OnInit {
         console.log('Puntaje total:', this.totalScore);
         // Actualizar el mensaje basado en la puntuación total
         this.message = this.writeMessage(this.totalScore);
-        this.getBackgroundColor(this.totalScore)
-
-        
+        this.getBackgroundColor(this.totalScore);        
       }
     }  
     // Cambiar el color del fondo según el valor seleccionado

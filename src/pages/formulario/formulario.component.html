@@ -8,7 +8,14 @@
         <!-- Primera etiqueta -->
         <label><span style="font-weight: bold;">{{ item.label }}</span></label>
         <!-- Segunda etiqueta -->
-        <label class="second-label" [ngStyle]="{'color': labelBackgrounds[item.name] || 'black', 'padding': '5px', 'border-radius': '5px'}">{{ item.labelsecond }}</label>
+        <label class="second-label" 
+        [ngStyle]="{
+          'color': labelBackgrounds[item.name] || 'black', 
+          'padding': '5px', 
+          'border-radius': '5px',
+          'font-weight': (labelBackgrounds[item.name] && labelBackgrounds[item.name] !== 'black') ? 'bold' : 'normal'
+        }"
+        >{{ item.labelsecond }}</label>
         <!-- Campo de selección -->
         <p-dropdown 
           [options]="item.options" 

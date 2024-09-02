@@ -68,12 +68,6 @@
     .navbar-collapse {
         max-height: none; /* Asegura que el menú se expanda completamente en móviles */
     }
-    .dropdown-divider {
-      display: block; /* Asegura que los divisores sean visibles */
-      width: 80%;
-      border: 0.1px solid grey  ;
-      margin: 1px 0;
-      background-color: red;
-    }
+    
     
 }
