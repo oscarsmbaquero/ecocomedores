@@ -21,6 +21,9 @@
   text-align: center;
   margin-bottom: 1rem;
   width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
+  box-shadow: 
+  0px 4px 8px rgba(0, 128, 0, 0.5), /* Sombra exterior verde */
+  inset 0px 0px 0px 2px white; /* Línea blanca interior */
 }
 
 /* Campo de formulario */
@@ -87,6 +90,17 @@ button {
   }
 }
 
+.total-puntos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrar horizontalmente */
+  width: auto; /* Permitir que el ancho se ajuste al contenido */
+  max-width: 80%; /* O un valor específico, dependiendo de tus necesidades */
+  margin: 0 auto; /* Centrar el div dentro de su contenedor */
+  padding: 1rem; /* Espaciado interno */
+  border-radius: 8px; /* Opcional: redondear bordes */
+}
 
 
 

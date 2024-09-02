@@ -17,6 +17,8 @@ import { aprovisionamiento } from '../../app/utils/mocks/aprovisionamiento';
 })
 export class FormularioComponent implements OnInit {
   sostenibilidadForm!: FormGroup;
+  
+  message: string = ''; // Propiedad para almacenar el mensaje
 
   totalScore= 0;
 
@@ -109,9 +111,13 @@ export class FormularioComponent implements OnInit {
         // Actualizar el puntaje del campo en fieldScores
         this.fieldScores[name] = newScore;  
         console.log('Puntaje total:', this.totalScore);
+        // Actualizar el mensaje basado en la puntuación total
+        this.message = this.writeMessage(this.totalScore);
+        this.getBackgroundColor(this.totalScore)
+
+        
       }
-    }
-  
+    }  
     // Cambiar el color del fondo según el valor seleccionado
     switch (value.value) {
       case 'nivel1':
@@ -134,6 +140,31 @@ export class FormularioComponent implements OnInit {
     }
   }
 
+  writeMessage(value: number): string {
+    switch (true) {
+      case (value < 30):
+        return "UF!! SE REQUIEREN CAMBIOS INMEDIATOS DE FUNCIONAMIENTO";        
+      case (value >= 33 && value <=56):
+        return "PARECE QUE HABRÁ QUE PONERSE A LA OBRA, PARA MEJORAR LA SITUACIÓN";        
+      case (value >= 58 && value <=70):
+          return "CUIDANDO LOS DETALLES, MEJORARÉIS LA SOSTENIBILIDAD DEL CENTRO.!ANIMO!";        
+
+      default:
+        return "BUEN TRABAJO! ESTAIS A PUNTO DE ALCANZAR UNA SOSTENIBILIDAD MÁXIMA";
+    }
+  }
+
+  getBackgroundColor(score: number): string {
+    if (score < 30) {
+      return 'red'; // Fondo rojo para puntajes bajos
+    } else if (score >= 30 && score < 60) {
+      return 'orange'; // Fondo naranja para puntajes medios
+    } else if (score >= 60 && score < 90) {
+      return 'lightgreen'; // Fondo verde claro para puntajes buenos
+    } else {
+      return 'green'; // Fondo verde para puntajes altos
+    }
+  }
   onSubmit(): void {
     console.log(this.sostenibilidadForm.value);
   }

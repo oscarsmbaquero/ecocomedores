@@ -18,7 +18,10 @@
           [style]="{'width':'100%'}"
         ></p-dropdown>
       </div>
-      <div><h3>Total: {{totalScore}}</h3></div>      
+      <div [ngStyle]="{'background-color': getBackgroundColor(totalScore)}" class="total-puntos">
+        <h3>Total: {{totalScore}}</h3><br/> 
+        <p>{{message}}</p>
+      </div>
     </div>
   
     <div class="section">
