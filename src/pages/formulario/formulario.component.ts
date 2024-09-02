@@ -147,8 +147,7 @@ export class FormularioComponent implements OnInit {
       case (value >= 33 && value <=56):
         return "PARECE QUE HABRÁ QUE PONERSE A LA OBRA, PARA MEJORAR LA SITUACIÓN";        
       case (value >= 58 && value <=70):
-          return "CUIDANDO LOS DETALLES, MEJORARÉIS LA SOSTENIBILIDAD DEL CENTRO.!ANIMO!";        
-
+          return "CUIDANDO LOS DETALLES, MEJORARÉIS LA SOSTENIBILIDAD DEL CENTRO.!ANIMO!";       
       default:
         return "BUEN TRABAJO! ESTAIS A PUNTO DE ALCANZAR UNA SOSTENIBILIDAD MÁXIMA";
     }

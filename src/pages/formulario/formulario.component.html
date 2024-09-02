@@ -8,7 +8,7 @@
         <!-- Primera etiqueta -->
         <label><span style="font-weight: bold;">{{ item.label }}</span></label>
         <!-- Segunda etiqueta -->
-        <label class="second-label" [ngStyle]="{'background-color': labelBackgrounds[item.name] || 'transparent', 'padding': '5px', 'border-radius': '5px'}">{{ item.labelsecond }}</label>
+        <label class="second-label" [ngStyle]="{'color': labelBackgrounds[item.name] || 'black', 'padding': '5px', 'border-radius': '5px'}">{{ item.labelsecond }}</label>
         <!-- Campo de selección -->
         <p-dropdown 
           [options]="item.options" 
@@ -19,10 +19,10 @@
         ></p-dropdown>
       </div>
       <div [ngStyle]="{'background-color': getBackgroundColor(totalScore)}" class="total-puntos">
-        <h3>Total: {{totalScore}}</h3><br/> 
-        <p>{{message}}</p>
+        <h3>Total: {{totalScore}}</h3><br/> <p>{{message}}</p>
       </div>
     </div>
+    <hr/>
   
     <div class="section">
         <div class="section-header">
