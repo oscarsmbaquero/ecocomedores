@@ -10,8 +10,9 @@
 /* Estilos para dispositivos móviles */
 @media (max-width: 600px) {
     .main {
-        padding: 2px; /* Reducir el padding en pantallas pequeñas */
-       
+        padding: 8px; /* Reducir el padding en pantallas pequeñas */
+        min-width: 350px; /* Ajuste del ancho mínimo en móviles */
+    }
 }
 
 /* Estilos para tablets */
@@ -19,12 +20,13 @@
     .main {
         padding: 12px; /* Ajustar el padding en tablets */
             }
+            
 }
 
 /* Estilos para pantallas grandes */
 @media (min-width: 1025px) {
     .main {
         padding: 24px; /* Mayor padding en pantallas grandes */
+        width: 80%;
     }
-}
 }
