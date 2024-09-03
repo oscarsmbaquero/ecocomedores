@@ -37,6 +37,15 @@
         </div>
       <div *ngFor="let item of distribucion" class="p-field">
         <label><span style="font-weight: bold;">{{ item.label }}</span></label>
+        <!-- Segunda etiqueta -->
+        <label class="second-label" 
+        [ngStyle]="{
+          'color': labelBackgrounds[item.name] || 'black', 
+          'padding': '5px', 
+          'border-radius': '5px',
+          'font-weight': (labelBackgrounds[item.name] && labelBackgrounds[item.name] !== 'black') ? 'bold' : 'normal'
+        }"
+        >{{ item.labelsecond }}</label>
         <p-dropdown 
           [options]="item.options" 
           formControlName="{{ item.name }}" 
@@ -52,7 +61,16 @@
             <h2>SOSTENIBILIDAD DEL PROCESO EN COCINA</h2>
             </div>
       <div *ngFor="let item of aprovisionamiento" class="p-field">
-        <label>{{ item.label }}</label>
+        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
+        <!-- Segunda etiqueta -->
+        <label class="second-label" 
+        [ngStyle]="{
+          'color': labelBackgrounds[item.name] || 'black', 
+          'padding': '5px', 
+          'border-radius': '5px',
+          'font-weight': (labelBackgrounds[item.name] && labelBackgrounds[item.name] !== 'black') ? 'bold' : 'normal'
+        }"
+        >{{ item.labelsecond }}</label>
         <p-dropdown 
           [options]="item.options" 
           formControlName="{{ item.name }}" 
@@ -66,7 +84,7 @@
         <div class="section-header">
             <h2>SOSTENIBILIDAD DEL CONSUMO EN COMEDOR</h2>
             </div>
-      <div *ngFor="let item of aprovisionamiento" class="p-field">
+      <div *ngFor="let item of cocina" class="p-field">
         <label>{{ item.label }}</label>
         <p-dropdown 
           [options]="item.options" 

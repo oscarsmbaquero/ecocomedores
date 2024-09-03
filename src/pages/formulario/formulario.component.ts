@@ -7,6 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 //mocks
 import { aprovisionamiento } from '../../app/utils/mocks/aprovisionamiento';
 import { distribucion } from '../../app/utils/mocks/distribucion';
+import { cocina } from '../../app/utils/mocks/procesado-cocina';
+import { comedor } from '../../app/utils/mocks/comedor';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
@@ -25,6 +27,8 @@ export class FormularioComponent implements OnInit {
 
   aprovisionamiento = aprovisionamiento;
   distribucion = distribucion;
+  cocina = cocina;
+  comedor = comedor;
   // Objeto para almacenar colores basados en el nivel seleccionado
   labelBackgrounds: { [key: string]: string } = {};
   fieldScores: { [key: string]: number } = {};
@@ -36,18 +40,64 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
     this.sostenibilidadForm = this.fb.group({});
+
+    this.initAprovisionamiento();
+    this.initDistribucion();
+    this.initCocina();
+    this.initComedor();
+    this.initResiduos();
+  }
+  
+  /**
+   * Inicializar aprovisionamiento
+   */
+  initAprovisionamiento(){
     this.addControls(this.aprovisionamiento);
     this.aprovisionamiento.forEach(item => {
       this.sostenibilidadForm.get(item.name)?.valueChanges.subscribe(value => {
         this.onDropdownChange(item.name, value);
       });
     });
+  }
+
+/**
+   * Inicializar distribucion
+   */
+  initDistribucion(){
     this.addControls(this.distribucion);
     this.aprovisionamiento.forEach(item => {
       this.sostenibilidadForm.get(item.name)?.valueChanges.subscribe(value => {
         this.onDropdownChange(item.name, value);
       });
     });
+  }
+ /**
+  * Inicializar Cocina
+  */
+  initCocina(){
+    this.addControls(this.cocina);
+    this.aprovisionamiento.forEach(item => {
+      this.sostenibilidadForm.get(item.name)?.valueChanges.subscribe(value => {
+        this.onDropdownChange(item.name, value);
+      });
+    });
+  }
+  
+  /**
+   * Inicializar Comedor
+   */
+  initComedor(){
+    this.addControls(this.comedor);
+    this.aprovisionamiento.forEach(item => {
+      this.sostenibilidadForm.get(item.name)?.valueChanges.subscribe(value => {
+        this.onDropdownChange(item.name, value);
+      });
+    });
+  }
+
+  initResiduos(){
+    console.log('implementar');
+    
   }
 
   
