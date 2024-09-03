@@ -2,7 +2,7 @@
 <form [formGroup]="sostenibilidadForm" (ngSubmit)="onSubmit()">
     <div class="section">
       <div class="section-header">
-        <h2>SOSTENIBILIDAD DE APROVISIONAMIENTO</h2>
+        <h2>SOSTENIBILIDAD DE APROVISIONAMIENTO *EVAL.POR FASE&nbsp;:&nbsp;{{totalScore}}*</h2>
       </div>
       <div *ngFor="let item of aprovisionamiento" class="p-field">
         <!-- Primera etiqueta -->
@@ -35,7 +35,7 @@
         <div class="section-header">
         <h2>SOSTENIBILIDAD DE LA DISTRIBUCIÓN</h2>
         </div>
-      <div *ngFor="let item of aprovisionamiento" class="p-field">
+      <div *ngFor="let item of distribucion" class="p-field">
         <label><span style="font-weight: bold;">{{ item.label }}</span></label>
         <p-dropdown 
           [options]="item.options" 

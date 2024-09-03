@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 //mocks
 import { aprovisionamiento } from '../../app/utils/mocks/aprovisionamiento';
+import { distribucion } from '../../app/utils/mocks/distribucion';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
@@ -23,6 +24,7 @@ export class FormularioComponent implements OnInit {
   totalScore= 0;
 
   aprovisionamiento = aprovisionamiento;
+  distribucion = distribucion;
   // Objeto para almacenar colores basados en el nivel seleccionado
   labelBackgrounds: { [key: string]: string } = {};
   fieldScores: { [key: string]: number } = {};
@@ -35,6 +37,12 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {
     this.sostenibilidadForm = this.fb.group({});
     this.addControls(this.aprovisionamiento);
+    this.aprovisionamiento.forEach(item => {
+      this.sostenibilidadForm.get(item.name)?.valueChanges.subscribe(value => {
+        this.onDropdownChange(item.name, value);
+      });
+    });
+    this.addControls(this.distribucion);
     this.aprovisionamiento.forEach(item => {
       this.sostenibilidadForm.get(item.name)?.valueChanges.subscribe(value => {
         this.onDropdownChange(item.name, value);
