@@ -1,5 +1,8 @@
 
     <app-header></app-header>
+    <button *ngIf="scrollPosition > 150" (click)="scrollToTop()">
+        <img src="../assets/images/up.png" class="floating-up"  width="500px"/>
+      </button>
     <div class="main">
         <app-logo></app-logo>
         <router-outlet></router-outlet>
