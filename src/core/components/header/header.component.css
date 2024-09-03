@@ -1,9 +1,8 @@
 /* //ESTILOS DE LOS HR, SEPARADOR */
 .dropdown-divider {
-  display: none;
-  width: 100%;
-  border: 0.1px solid rgb(173, 15, 15)  ;
-  margin: 1px 0;
+  /* width: 100%; */
+  border: 0.1px solid rgb(233, 224, 224)  ;
+  /* margin: 1px 0; */
 }
 
 
@@ -55,6 +54,16 @@
 
 .selected {      
   font-weight: bold;
+  color: black;
+}
+span{
+  text-transform: uppercase;
+  color:blue;
+  font-family: 'Raleway', sans-serif;
+}
+.nav{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 /* Ajuste opcional para evitar barras de desplazamiento en móviles */
@@ -62,6 +71,11 @@
     .navbar-nav {
         overflow: hidden; /* Asegura que el contenido no se desborde */
         height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    span{
+      text-transform: capitalize;
+      color:black;
     }
     
 
@@ -73,7 +87,9 @@
         max-height: none; /* Asegura que el menú se expanda completamente en móviles */
     }
 
-
+    .dropdown-divider {
+      border: 0.1px solid rgb(233, 224, 224)  ;
+    }
 
   
     
