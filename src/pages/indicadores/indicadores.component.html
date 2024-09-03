@@ -1,3 +1,79 @@
-<div class="instrucciones">
-    <img src="../../assets/images/popup.png" />
+<div class="card">
+<div class="div-botones">
+    <div><button class="botones">Descargar informe de respaldo</button></div>
+    <div><button class="botones">Descargar informe completo</button></div>
+</div>
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">FASE DE APROVISIONAMIENTO: PRODUCCIÓN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td style="background-color: rgb(0, 119, 255); color:white">INDICADOR DE SOSTENIBILIDAD</td>
+            <td style="background-color: rgb(0, 119, 255); color:white" >NOTAS</td>
+            <td style="background-color: rgb(0, 119, 255); color:white">Pág. de referencia en el informe</td>
+          </tr>
+        <tr *ngFor="let item of productionIndicators">
+          <td>{{item.indicator}}</td>
+          <td>{{item.notes}}</td>
+          <td>{{item.page}}</td>
+        </tr>
+        <tr>
+          <th colspan="3">FASE DE APROVISIONAMIENTO: DISTRIBUCIÓN</th>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(0, 119, 255); color:white">INDICADOR DE SOSTENIBILIDAD</td>
+            <td style="background-color: rgb(0, 119, 255); color:white" >NOTAS</td>
+            <td style="background-color: rgb(0, 119, 255); color:white">Pág. de referencia en el informe</td>
+          </tr>
+        <tr *ngFor="let item of distributionIndicators">
+          <td>{{item.indicator}}</td>
+          <td>{{item.notes}}</td>
+          <td>{{item.page}}</td>
+        </tr>
+        <tr>
+          <th colspan="3">FASE DE PROCESADO EN COCINA</th>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(0, 119, 255); color:white">INDICADOR DE SOSTENIBILIDAD</td>
+            <td style="background-color: rgb(0, 119, 255); color:white" >NOTAS</td>
+            <td style="background-color: rgb(0, 119, 255); color:white">Pág. de referencia en el informe</td>
+          </tr>
+        <tr *ngFor="let item of kitchenProcessingIndicators">
+          <td>{{item.indicator}}</td>
+          <td>{{item.notes}}</td>
+          <td>{{item.page}}</td>
+        </tr>
+        <tr>
+          <th colspan="3">FASE DE CONSUMO EN COMEDOR</th>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(0, 119, 255); color:white">INDICADOR DE SOSTENIBILIDAD</td>
+            <td style="background-color: rgb(0, 119, 255); color:white" >NOTAS</td>
+            <td style="background-color: rgb(0, 119, 255); color:white">Pág. de referencia en el informe</td>
+          </tr>
+        <tr *ngFor="let item of consumptionIndicators">
+          <td>{{item.indicator}}</td>
+          <td>{{item.notes}}</td>
+          <td>{{item.page}}</td>
+        </tr>
+        <tr>
+          <th colspan="3">FASE DE PRODUCCIÓN Y GESTIÓN DE RESIDUOS EN COMEDOR</th>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(0, 119, 255); color:white">INDICADOR DE SOSTENIBILIDAD</td>
+            <td style="background-color: rgb(0, 119, 255); color:white" >NOTAS</td>
+            <td style="background-color: rgb(0, 119, 255); color:white">Pág. de referencia en el informe</td>
+          </tr>
+        <tr *ngFor="let item of wasteManagementIndicators">
+          <td>{{item.indicator}}</td>
+          <td>{{item.notes}}</td>
+          <td>{{item.page}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>

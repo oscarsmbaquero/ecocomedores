@@ -53,6 +53,10 @@
     overflow: hidden; /* Evita el desbordamiento vertical */
 }
 
+.selected {      
+  font-weight: bold;
+}
+
 /* Ajuste opcional para evitar barras de desplazamiento en móviles */
 @media (max-width: 768px) {
     .navbar-nav {
@@ -68,6 +72,10 @@
     .navbar-collapse {
         max-height: none; /* Asegura que el menú se expanda completamente en móviles */
     }
+
+
+
+  
     
     
 }

@@ -35,24 +35,34 @@
     </label>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-md-0 navbar-nav-scroll">
-        <li class="nav-item" routerLinkActive="active" (click)="selectOption('Instrucciones')">
-          <a class="nav-link" [routerLink]="['instrucciones']"><span style="color:black">Instrucciones</span></a>
+        <li class="nav-item" routerLinkActive="active" 
+        [class.selected]="selectedOption === 'instrucciones'"
+        (click)="selectOption('instrucciones')">
+          <a class="nav-link" [routerLink]="['instrucciones']"><span>Instrucciones</span></a>
         </li>
         <hr class="dropdown-divider" />
-        <li class="nav-item" (click)="selectOption('form')">
+        <li class="nav-item" 
+        [class.selected]="selectedOption === 'form'"
+        (click)="selectOption('form')">
           <a class="nav-link" [routerLink]="['form']"><span style="color:black">Formulario</span></a>
         </li>
         <hr class="dropdown-divider" />
-        <li class="nav-item" (click)="selectOption('indicadores')">
+        <li class="nav-item" 
+        [class.selected]="selectedOption === 'indicadores'"
+        (click)="selectOption('indicadores')">
           <a class="nav-link" [routerLink]="['indicadores']"><span style="color:black">Indicadores</span></a>
         </li>
         <hr class="dropdown-divider" />
-        <li class="nav-item" (click)="selectOption('buenas-practicas')">
+        <li class="nav-item" 
+        [class.selected]="selectedOption === 'buenas-practicas'"
+        (click)="selectOption('buenas-practicas')">
           <a class="nav-link" [routerLink]="['buenas-practicas']"><span style="color:black">Buenas prácticas</span></a>
         </li>
         <hr class="dropdown-divider" />
-        <li class="nav-item" (click)="selectOption('hoja-ruta')">
-          <a class="nav-link" [routerLink]="['/hoja-ruta']"><span style="color:black">Hoja de ruta</span></a>
+        <li class="nav-item" 
+        [class.selected]="selectedOption === 'hoja-ruta'"
+        (click)="selectOption('hoja-ruta')">
+          <a class="nav-link" [routerLink]="['hoja-ruta']"><span style="color:black">Hoja de ruta</span></a>
         </li>
         <hr class="dropdown-divider" />
       </ul>
