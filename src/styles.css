@@ -5,3 +5,13 @@
     display: block; /* Elimina el espacio en blanco debajo de la imagen */
     max-width: 100%; /* Asegura que la imagen no se agrande más allá de su tamaño original */
 }
+
+.card{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    /* border: 1px solid rgb(95, 93, 93); */
+    margin: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ejemplo de sombra */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del width */
+  }

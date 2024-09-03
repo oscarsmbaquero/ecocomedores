@@ -1,13 +1,5 @@
 /* Contenedor de cada sección para que sea flexible y ocupe el ancho completo */
-.card{
-  display: flex;
-  justify-content: center;
-  padding:10px;
-  /* border: 1px solid rgb(95, 93, 93); */
-  margin: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ejemplo de sombra */
-  box-sizing: border-box; /* Incluye padding y border en el cálculo del width */
-}
+
 .section {
   margin-bottom: 2rem;
   display: flex;

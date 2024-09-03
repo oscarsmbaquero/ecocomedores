@@ -4,6 +4,7 @@ import { InstruccionesComponent } from '../pages/instrucciones/instrucciones.com
 import { HojaRutaComponent } from '../pages/hoja-ruta/hoja-ruta.component';
 import { IndicadoresComponent } from '../pages/indicadores/indicadores.component';
 import { FormularioComponent } from '../pages/formulario/formulario.component';
+import { BueneasPracticasComponent } from '../pages/buenas-practicas/bueneas-practicas/bueneas-practicas.component';
 
 export const routes: Routes = [
     {
@@ -27,9 +28,14 @@ export const routes: Routes = [
         component: FormularioComponent
     },
     {
+        path: "buenas-practicas",//raiz de la app
+        pathMatch:'full',//coincida nombre exactoa
+        component: BueneasPracticasComponent
+    },
+    {
         path: '',
         //canActivate: [AuthGuard],
-        component: InstruccionesComponent
+        component: FormularioComponent
       },
       { 
         path: '**', 
