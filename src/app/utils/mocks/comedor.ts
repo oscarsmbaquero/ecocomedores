@@ -5,31 +5,31 @@ export const comedor = [
       labelsecond: '¿Cuántos ingredientes diferentes se utilizan en los menús?',
       options: [
         {
-          label: '100% energía eléctrica mixta y/o gas',
+          label: 'Menos de 20 alimentos diferentes en el menú escolar a lo largo del curso',
           value: 'nivel1',
           score: 3,
         },
         {
           label:
-            '75% electricidad de origen mixto y el 25% restante electricidad verde (origen renovable)',
+            'Al menos 30 alimentos diferentes en el menú escolar del curso',
           value: 'nivel2',
           score: 6,
         },
         {
             label:
-              '50% de electricidad mixta y el 50% restante electricidad verde',
+              'Al menos 40 alimentos diferentes en el menú escolar del curso',
             value: 'nivel3',
             score: 9,
           },
         {
           label:
-            '25% de electricidad mixta y el 75% restante electricidad verde',
+            'Al menos 50 alimentos diferentes en el menú escolar del curso',
           value: 'nivel4',
           score: 11,
         },
         {
           label:
-            '100% energía eléctrica renovable/ verde',
+            'Al menos 60 alimentos diferentes en el menú de un curso escolar',
           value: 'nivel5',
           score: 14,
         },
@@ -44,31 +44,31 @@ export const comedor = [
       options: [
         {
           label:
-            'Ningún equipo certificado',
+            'No existe variación en el menú a lo largo del curso escolar',
           value: 'nivel1',
           score: 3,
         },
         {
           label:
-            'El 25% del equipamiento está certificado',
+            'La variación del menú a lo largo del curso es de un 25%',
           value: 'nivel2',
           score: 6,
         },
         {
           label:
-            'El 50% del equipamiento está certificado',
+            'La variación del menú a lo largo del curso es de un 50%',
           value: 'nivel3',
           score: 9,
         },
         {
           label:
-            'El 75% del equipamiento está certificado',
+            'La variación del menú a lo largo del curso es de un 75%',
           value: 'nivel4',
           score: 12,
         },
         {
           label:
-            'Todos los equipos certificados',
+            'Existen ruedas de menú de 5 semanas con dos temporadas (calor y frío)',
           value: 'nivel5',
           score: 15,
         },
@@ -81,31 +81,31 @@ export const comedor = [
       options: [
         {
           label:
-            'Ninguna medida de control del desperdicio en cocina y existe desperdicio alimentario semanal por sobreproducción de menús y/o deficiente control de caducidades',
+            'No se pone ninguna atención a la adecuación cultural de los menús',
           value: 'nivel1',
           score: 4,
         },
         {
           label:
-            'Existe alguna medida de control y se produce desperdicio alimentario mensual por sobreproducción de menús y/o deficiente control de caducidades ',
+            'Al menos el 60% de los menús se alinean con la dieta mediterránea',
           value: 'nivel2',
           score: 8,
         },
         {
           label:
-            'Existen varias medidas de control y se produce desperdicio alimentario puntual en el curso escolar por sobreproducción de menús y/o deficiente control de caducidades ',
+            'Al menos el 80% de los menús se alinean con la dieta mediterránea pero sin ninguna receta propiamente extremeña',
           value: 'nivel3',
           score: 12,
         },
         {
           label:
-            'Existen medidas diarias de control en: planificación de compras, gestión de caducidades, previsión de bajas; y el personal de cocina está formado en estas materias',
+            'Al menos el 80% de los menús se alinean con la dieta mediterránea y al menos el 20% de ellos son recetas propiamente extremeñas ',
           value: 'nivel4',
           score: 16,
         },
         {
           label:
-            'Se toman todas las medidas anteriores de minimización del desperdicio y además se realizan auditorías trimestrales de medición del volúmen',
+            'Se cumple el escenario anterior y, además, hay un plan educativo para la puesta en valor de la gastronomía regional como patrimonio cultural',
           value: 'nivel5',
           score: 20,
         },
@@ -119,33 +119,33 @@ export const comedor = [
       options: [
         {
           label:
-            '100% de materiales auxiliares de un solo uso',
+            'Escasa presencia de verduras y hortalizas',
           value: 'nivel1',
-          score: 4,
+          score: 3,
         },
         {
           label:
-            '75% de materiales auxiliares de un solo uso',
+            'El menú diario por comensal tiene un contenido de al menos 100g en verduras y hortalizas',
           value: 'nivel2',
-          score: 8,
+          score: 6,
         },
         {
           label:
-            '50% de materiales auxiliares de un solo uso',
+            'El menú diario por comensal tiene un contenido de al menos 150g en verduras y hortalizas',
           value: 'nivel3',
-          score: 12,
+          score: 9,
         },
         {
           label:
-            '25% de materiales auxiliares de un solo uso',
+            'El menú diario por comensal tiene un contenido de al menos 200g en verduras y hortalizas',
           value: 'nivel4',
-          score: 16,
+          score: 11,
         },
         {
           label:
-            '100% materiales auxiliares lavables reutilizables',
+            'El menú diario por comensal tiene un contenido de al menos 250g en verduras y hortalizas',
           value: 'nivel5',
-          score: 20,
+          score: 14,
         },
       ],
     },
@@ -157,33 +157,33 @@ export const comedor = [
       options: [
         {
           label:
-            'Distancia de catering a comedor superior a 100 km',
+            'Ningún día sin consumo de proteína animal',
           value: 'nivel1',
-          score: 4,
+          score: 3,
         },
         {
           label:
-            'Distancia de catering a comedor superior a 70 km',
+            'Al menos 1 día sin consumo de proteína animal',
           value: 'nivel2',
-          score: 8,
+          score: 6,
         },
         {
           label:
-            'Distancia de catering a comedor superior a 50 km',
+            'Al menos 2 días sin consumo de proteína animal',
           value: 'nivel3',
-          score: 12,
+          score: 9,
         },
         {
           label:
-            'Distancia de catering a comedor superior a 30 km',
+            'Al menos 3 días sin consumo de carne pero sin atención en el origen de la carne',
           value: 'nivel4',
-          score: 16,
+          score: 11,
         },
         {
           label:
-            'Distancia de catering a comedor superior a 15 km',
+            'Al menos 3 días a la semana sin consumo de carne y la que se consume procede de ganadería extensiva',
           value: 'nivel5',
-          score: 20,
+          score: 14,
         },
       ],
     },
@@ -195,33 +195,33 @@ export const comedor = [
         options: [
           {
             label:
-              'Distancia de catering a comedor superior a 100 km',
+              '100% energía eléctrica mixta y/o gas',
             value: 'nivel1',
-            score: 4,
+            score: 3,
           },
           {
             label:
-              'Distancia de catering a comedor superior a 70 km',
+              '75% de energía mixta y el 25% restante es de origen renovable',
             value: 'nivel2',
-            score: 8,
+            score: 6,
           },
           {
             label:
-              'Distancia de catering a comedor superior a 50 km',
+              '50% de energía mixta y el 50% restante es renovable',
             value: 'nivel3',
-            score: 12,
+            score: 9,
           },
           {
             label:
-              'Distancia de catering a comedor superior a 30 km',
+              '25% de energía mixta y el 75% energía renovable',
             value: 'nivel4',
-            score: 16,
+            score: 11,
           },
           {
             label:
-              'Distancia de catering a comedor superior a 15 km',
+              '100% energía eléctrica renovable',
             value: 'nivel5',
-            score: 20,
+            score: 14,
           },
         ],
       },
@@ -233,33 +233,33 @@ export const comedor = [
         options: [
           {
             label:
-              'Distancia de catering a comedor superior a 100 km',
+              'Ningún equipo de comedor está certificado',
             value: 'nivel1',
-            score: 4,
+            score: 3,
           },
           {
             label:
-              'Distancia de catering a comedor superior a 70 km',
+              '25% del equipamiento de comedor está certificado',
             value: 'nivel2',
-            score: 8,
+            score: 6,
           },
           {
             label:
-              'Distancia de catering a comedor superior a 50 km',
+              '50% del equipamiento de comedor está certificado',
             value: 'nivel3',
-            score: 12,
+            score: 9,
           },
           {
             label:
-              'Distancia de catering a comedor superior a 30 km',
+              '75% del equipamiento de comedor está certificado',
             value: 'nivel4',
-            score: 16,
+            score: 11,
           },
           {
             label:
-              'Distancia de catering a comedor superior a 15 km',
+              'Se da la condición del escenario anterior y, además, se realiza auditoría trimestral de control de consumos y actividades formativas de concienciación en ahorro de energía',
             value: 'nivel5',
-            score: 20,
+            score: 14,
           },
         ],
       },

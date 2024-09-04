@@ -7,8 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 //mocks
 import { aprovisionamiento } from '../../app/utils/mocks/aprovisionamiento';
 import { distribucion } from '../../app/utils/mocks/distribucion';
-import { cocina } from '../../app/utils/mocks/procesado-cocina';
+import { cocina } from '../../app/utils/mocks/cocina';
 import { comedor } from '../../app/utils/mocks/comedor';
+import { residuos } from '../../app/utils/mocks/residuos';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
@@ -29,6 +30,7 @@ export class FormularioComponent implements OnInit {
   distribucion = distribucion;
   cocina = cocina;
   comedor = comedor;
+  residuos = residuos;
   // Objeto para almacenar colores basados en el nivel seleccionado
   labelBackgrounds: { [key: string]: string } = {};
   fieldScores: { [key: string]: number } = {};
@@ -96,7 +98,12 @@ export class FormularioComponent implements OnInit {
   }
 
   initResiduos(){
-    console.log('implementar');
+    this.addControls(this.residuos);
+    this.aprovisionamiento.forEach(item => {
+      this.sostenibilidadForm.get(item.name)?.valueChanges.subscribe(value => {
+        this.onDropdownChange(item.name, value);
+      });
+    });
     
   }
 
@@ -112,45 +119,6 @@ export class FormularioComponent implements OnInit {
     * @param name 
     * @param value 
     */
-  //  onDropdownChange(name: string, value: any): void {
-  //   console.log('Campo:', name, 'Valor seleccionado:', value);
-
-  //   const selectedItem = this.aprovisionamiento.find(item => item.name === name);
-  //   console.log(selectedItem);
-  //   if (selectedItem) {
-  //     // Buscar la opción seleccionada dentro del item
-  //     const selectedOption = selectedItem.options.find(option => option.value === value.value);
-  
-  //     if (selectedOption) {
-  //       // Sumar el puntaje de la opción seleccionada al puntaje total
-  //       this.totalScore += selectedOption.score;
-  //       console.log('Puntaje total:', this.totalScore);
-  //     }
-  //   }
-    
-
-
-  //   switch(value.value) {
-  //     case 'nivel1':
-  //       console.log(value,'asasasa');        
-  //       this.labelBackgrounds[name] = 'red';
-  //       break;
-  //     case 'nivel2':
-  //       this.labelBackgrounds[name] = 'orange';
-  //       break;
-  //     case 'nivel3':
-  //       this.labelBackgrounds[name] = 'orange';
-  //       break;
-  //     case 'nivel4':
-  //       this.labelBackgrounds[name] = 'lightgreen';
-  //       break;
-  //     case 'nivel5':
-  //       this.labelBackgrounds[name] = 'green';
-  //       break;
-  //     default:        
-  //       this.labelBackgrounds[name] = 'black'; // Color por defecto
-  //   }
-  // }
   onDropdownChange(name: string, value: any): void {
     console.log('Campo:', name, 'Valor seleccionado:', value);  
     // Buscar el item correspondiente por el nombre

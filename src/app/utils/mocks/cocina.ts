@@ -263,6 +263,5 @@ export const cocina = [
           },
         ],
       },
-    // Agrega los otros campos de manera similar
   ];
   
