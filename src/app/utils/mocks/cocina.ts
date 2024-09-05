@@ -1,6 +1,6 @@
 export const cocina = [
     {
-      name: 'campo1_b1',
+      name: 'cocina1',
       label: '14. ENERGÍA UTILIZADA EN COCINADO Y CONSERVACIÓN ',
       labelsecond: '¿Qué energía se utiliza para cocinar y conservar los alimentos?',
       options: [
@@ -37,7 +37,7 @@ export const cocina = [
       ],
     },
     {
-      name: 'campo2_b1',
+      name: 'cocina2',
       label: '15. CERTIFICADO AMBIENTAL DE LA DOTACIÓN ',
       labelsecond:
         '¿Tienen los equipos de la cocina certificado ambiental de dotación?',
@@ -75,7 +75,7 @@ export const cocina = [
       ],
     },
     {
-      name: 'campo3_b1',
+      name: 'cocina3',
       label: '16. CONTROL DE DESPERDICIO ALIMENTARIOEN COCINA ',
       labelsecond: '¿Hay medidas de control del desperdicio alimentario en cocina?',
       options: [
@@ -112,7 +112,7 @@ export const cocina = [
       ],
     },
     {
-      name: 'campo4_b1',
+      name: 'cocina4',
       label: '17. MATERIAL AUXILIAR UTILIZADO EN COCINA ',
       labelsecond:
         '¿El transporte de alimentos se realiza en vehículos dependientes de combustibles fósiles?',
@@ -150,7 +150,7 @@ export const cocina = [
       ],
     },
     {
-      name: 'campo5_b1',
+      name: 'cocina5',
       label: '18. MATERIALES DE ENVASADO DE MENUS',
       labelsecond:
         '¿Cómo van envasados los menús?',
@@ -188,7 +188,7 @@ export const cocina = [
       ],
     },
     {
-        name: 'campo5_b1',
+        name: 'cocina6',
         label: '19. TIPO DE PRODUCTOS DE LIMPIEZA UTILIZADOS EN COCINA ',
         labelsecond:
           '¿Qué tipo de productos de limpieza se utilizan en cocina?',
@@ -226,7 +226,7 @@ export const cocina = [
         ],
       },
       {
-        name: 'campo5_b1',
+        name: 'cocina7',
         label: '20. SEPARACIÓN DE RESIDUOS',
         labelsecond:
           '¿Se separan los residuos en cocina?',

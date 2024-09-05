@@ -1,6 +1,6 @@
 export const comedor = [
     {
-      name: 'campo1_b1',
+      name: 'comedor1',
       label: '21.VARIEDAD DE ALIMENTOS EN EL MENÚ ',
       labelsecond: '¿Cuántos ingredientes diferentes se utilizan en los menús?',
       options: [
@@ -37,7 +37,7 @@ export const comedor = [
       ],
     },
     {
-      name: 'campo2_b1',
+      name: 'comedor2',
       label: '22. TEMPORALIDAD EN EL MENÚ',
       labelsecond:
         '¿Varía el menú en función de la época del año?',
@@ -75,7 +75,7 @@ export const comedor = [
       ],
     },
     {
-      name: 'campo3_b1',
+      name: 'comedor3',
       label: '23. ADECUACIÓN A LA CULTURA GASTRONÓMICA REGIONAL ',
       labelsecond: '¿Se incorporan recetas propias de la dieta mediterránea y extremeña?',
       options: [
@@ -112,7 +112,7 @@ export const comedor = [
       ],
     },
     {
-      name: 'campo4_b1',
+      name: 'comedor4',
       label: '24. MEDIDAS DE AUMENTO DE VERDURAS Y HORTALIZAS ',
       labelsecond:
         '¿Qué contenido de verduras y hortalizas hay en el menú?',
@@ -150,7 +150,7 @@ export const comedor = [
       ],
     },
     {
-      name: 'campo5_b1',
+      name: 'comedor5',
       label: '25. MEDIDAS DE REDUCCIÓN Y MEJORA DE LA CALIDAD DE LA PROTEÍNA ANIMAL ',
       labelsecond:
         '¿Cuánta carne y de qué tipo de manejo ganadero se consume?',
@@ -188,7 +188,7 @@ export const comedor = [
       ],
     },
     {
-        name: 'campo5_b1',
+        name: 'comedor6',
         label: '26. TIPO DE ELECTRICIDAD EN FUNCIONAMIENTO COMEDOR ',
         labelsecond:
           '¿Qué tipo de energía se usa en el comedor?',
@@ -226,7 +226,7 @@ export const comedor = [
         ],
       },
       {
-        name: 'campo5_b1',
+        name: 'comedor7',
         label: '27. CERTIFICACIÓN AMBIENTAL DE DOTACIÓN DE COMEDOR ',
         labelsecond:
           '¿Los equipos utilizados en comedor tienen certificado ambiental?',

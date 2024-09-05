@@ -1,6 +1,6 @@
 export const distribucion = [
     {
-      name: 'campo1_b1',
+      name: 'distribucion1',
       label: '9. CANTIDAD DE ENVASES Y EMBALAJES',
       labelsecond: '¿Procuráis reducir la basura asociada al consumo de alimentos?',
       options: [
@@ -37,7 +37,7 @@ export const distribucion = [
       ],
     },
     {
-      name: 'campo2_b1',
+      name: 'distribucion2',
       label: '10. PROPORCIÓN Y TIPO DE P LÁSTICOS UTILIZADOS ',
       labelsecond:
         '¿Procuráis reducir el uso de plásticos?',
@@ -75,7 +75,7 @@ export const distribucion = [
       ],
     },
     {
-      name: 'campo3_b1',
+      name: 'distribucion3',
       label: '11. PROPORCIÓN DE EMBALAJES ALUMÍNICOS Y ENLATADOS',
       labelsecond: '¿Procuráis sustituir los envases alumínicos teniendo en cuenta la escasez de estos materiales?',
       options: [
@@ -112,7 +112,7 @@ export const distribucion = [
       ],
     },
     {
-      name: 'campo4_b1',
+      name: 'distribucion4',
       label: '12. ENERGÍA UTILIZADA POR LOS VEHÍCULOS IMPLICADOS ',
       labelsecond:
         '¿El transporte de alimentos se realiza en vehículos dependientes de combustibles fósiles?',
@@ -150,7 +150,7 @@ export const distribucion = [
       ],
     },
     {
-      name: 'campo5_b1',
+      name: 'distribucion5',
       label: '13.KILOMETRAJE RECORRIDO ',
       labelsecond:
         '¿Cuánta distancia hay desde el lugar en el que se cocina hasta el comedor?',
