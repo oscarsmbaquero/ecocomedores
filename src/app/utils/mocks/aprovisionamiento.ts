@@ -1,6 +1,6 @@
 export const aprovisionamiento = [
   {
-    name: 'campo1_b1',
+    name: 'aprovisionamiento1',
     label: '1. CERTIFICADO DE PRODUCCIÓN ECOLÓGICA',
     labelsecond: '¿Hay alimentos de producción ecologica en el menú?',
     options: [
@@ -36,7 +36,7 @@ export const aprovisionamiento = [
     ],
   },
   {
-    name: 'campo2_b1',
+    name: 'aprovisionamiento2',
     label: '2. COMPROMISO CON LA GANADERIA EXTENSIVA',
     labelsecond:
       '¿Los alimentos de origen animal proceden de ganadería extensiva?',
@@ -74,7 +74,7 @@ export const aprovisionamiento = [
     ],
   },
   {
-    name: 'campo3_b1',
+    name: 'aprovisionamiento3',
     label: '3. CERTIFICADO DE PESCA SOSTENIBLE ',
     labelsecond: '¿EL pescado procede de pesca sostenible?',
     options: [
@@ -111,7 +111,7 @@ export const aprovisionamiento = [
     ],
   },
   {
-    name: 'campo4_b1',
+    name: 'aprovisionamiento4',
     label: '4. PRODUCTOS DE COMERCIO JUSTO / INICIATIVA COOPERATIVA  ',
     labelsecond:
       '¿Consumís productos de comercio justo o de iniciativas de economía cooperativa?',
@@ -149,7 +149,7 @@ export const aprovisionamiento = [
     ],
   },
   {
-    name: 'campo5_b1',
+    name: 'aprovisionamiento5',
     label: '5. DENOMINACIONES DOP/IGP   ',
     labelsecond:
       '¿Consumís productos de comercio justo o de iniciativas de economía cooperativa?',
@@ -187,7 +187,7 @@ export const aprovisionamiento = [
     ],
   },
   {
-    name: 'campo6_b1',
+    name: 'aprovisionamiento6',
     label: '6. TERRITORIALIDAD DE LOS ALIMENTOS',
     labelsecond: '¿Dónde se producen los alimentos que compráis?',
     options: [
@@ -224,7 +224,7 @@ export const aprovisionamiento = [
     ],
   },
   {
-    name: 'campo7_b1',
+    name: 'aprovisionamiento7',
     label: '7. ESTACIONALIDAD DEL ALIMENTO ',
     labelsecond: '¿Consumís alimentos de temporada?',
     options: [
@@ -258,7 +258,7 @@ export const aprovisionamiento = [
     ],
   },
   {
-    name: 'campo8_b1',
+    name: 'aprovisionamiento8',
     label: '8. FRESCURA DE LOS ALIMENTOS    ',
     labelsecond: '¿Consumís alimentos frescos?',
     options: [

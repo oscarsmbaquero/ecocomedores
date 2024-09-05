@@ -1,6 +1,6 @@
 export const residuos = [
     {
-      name: 'campo1_b1',
+      name: 'residuos1',
       label: '28. CONTROL DEL DESPILFARRO ALIMENTARIO EN COMEDOR',
       labelsecond: '¿Hay alguna medida para disminuir el despilfarro alimentario en comedor?',
       options: [
@@ -37,7 +37,7 @@ export const residuos = [
       ],
     },
     {
-      name: 'campo2_b1',
+      name: 'residuos2',
       label: '29.REUSABILIDAD DEL MENAJE (material auxiliar) UTILIZADO EN COMEDOR ',
       labelsecond:
         '¿Qué proporción del menaje del comedor es reusable?',
@@ -75,7 +75,7 @@ export const residuos = [
       ],
     },
     {
-      name: 'campo3_b1',
+      name: 'residuos3',
       label: '30. REDUCCIÓN DEL VOLÚMEN DE RESIDUOS EN COMEDOR ',
       labelsecond: '¿Se procura la reducción de residuos en comedor?',
       options: [
@@ -112,7 +112,7 @@ export const residuos = [
       ],
     },
     {
-      name: 'campo4_b1',
+      name: 'residuos4',
       label: '31. SEPARACIÓN DE RESIDUOS',
       labelsecond:
         '¿Se separan los residuos después de comer?',
@@ -150,7 +150,7 @@ export const residuos = [
       ],
     },
     {
-      name: 'campo5_b1',
+      name: 'residuos5',
       label: '32. PLANES DE COMPOSTAJE',
       labelsecond:
         '¿Se separa la fracción orgánica? ¿Y se composta?',
@@ -188,7 +188,7 @@ export const residuos = [
       ],
     },
     {
-        name: 'campo5_b1',
+        name: 'residuos6',
         label: '33. PRODUCTOS DE LIMPIEZA EMPLEADOS ',
         labelsecond:
           '¿Qué tipo de productos de limpieza se utilizan en el comedor?',

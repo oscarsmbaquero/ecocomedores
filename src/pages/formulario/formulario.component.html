@@ -1,133 +1,27 @@
 <div class="card">
-<form [formGroup]="sostenibilidadForm" (ngSubmit)="onSubmit()">
-    <div class="section">
-      <div class="section-header">
-        <h2>SOSTENIBILIDAD DE APROVISIONAMIENTO *EVAL.POR FASE&nbsp;:&nbsp;{{totalScore}}*</h2>
-      </div>
-      <div *ngFor="let item of aprovisionamiento" class="p-field">
-        <!-- Primera etiqueta -->
-        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
-        <!-- Segunda etiqueta -->
-        <label class="second-label" 
-        [ngStyle]="{
-          'color': labelBackgrounds[item.name] || 'black', 
-          'padding': '5px', 
-          'border-radius': '5px',
-          'font-weight': (labelBackgrounds[item.name] && labelBackgrounds[item.name] !== 'black') ? 'bold' : 'normal'
-        }"
-        >{{ item.labelsecond }}</label>
-        <!-- Campo de selección -->
-        <p-dropdown 
-          [options]="item.options" 
-          formControlName="{{ item.name }}" 
-          optionLabel="label" 
-          placeholder="Selecciona una respuesta" 
-          [style]="{'width':'100%'}"
-        ></p-dropdown>
-      </div>
-      <div [ngStyle]="{'background-color': getBackgroundColor(totalScore)}" class="total-puntos">
-        <h3>Total: {{totalScore}}</h3><br/> <p>{{message}}</p>
-      </div>
+  <!-- <form [formGroup]="sostenibilidadForm" (ngSubmit)="onSubmit()"> -->
+    <app-aprovisionamiento
+      (totalScoreChange)="handleTotalScoreChange($event)"
+    ></app-aprovisionamiento>
+    <hr />
+    <app-distribucion
+      (totalScoreChange)="handleTotalScoreChange($event)"
+    ></app-distribucion>
+    <hr />
+    <app-cocina
+      (totalScoreChange)="handleTotalScoreChange($event)"
+    ></app-cocina>
+    <hr />
+    <app-comedor
+      (totalScoreChange)="handleTotalScoreChange($event)"
+    ></app-comedor>
+    <hr />
+    <app-residuos
+      (totalScoreChange)="handleTotalScoreChange($event)"
+    ></app-residuos>
+    <div class="total-puntos">
+      <h3>Media: {{totalScore}}</h3><br/>
     </div>
-    <hr/>  
-    <div class="section">
-        <div class="section-header">
-        <h2>SOSTENIBILIDAD DE LA DISTRIBUCIÓN</h2>
-        </div>
-      <div *ngFor="let item of distribucion" class="p-field">
-        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
-        <!-- Segunda etiqueta -->
-        <label class="second-label" 
-        [ngStyle]="{
-          'color': labelBackgrounds[item.name] || 'black', 
-          'padding': '5px', 
-          'border-radius': '5px',
-          'font-weight': (labelBackgrounds[item.name] && labelBackgrounds[item.name] !== 'black') ? 'bold' : 'normal'
-        }"
-        >{{ item.labelsecond }}</label>
-        <p-dropdown 
-          [options]="item.options" 
-          formControlName="{{ item.name }}" 
-          optionLabel="label" 
-          placeholder="Selecciona nivel" 
-          [style]="{'width':'100%'}"
-        ></p-dropdown>
-      </div>
-    </div>
-    <hr/>  
-    <div class="section">
-        <div class="section-header">
-            <h2>SOSTENIBILIDAD DEL PROCESO EN COCINA</h2>
-            </div>
-      <div *ngFor="let item of cocina" class="p-field">
-        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
-        <!-- Segunda etiqueta -->
-        <label class="second-label" 
-        [ngStyle]="{
-          'color': labelBackgrounds[item.name] || 'black', 
-          'padding': '5px', 
-          'border-radius': '5px',
-          'font-weight': (labelBackgrounds[item.name] && labelBackgrounds[item.name] !== 'black') ? 'bold' : 'normal'
-        }"
-        >{{ item.labelsecond }}</label>
-        <p-dropdown 
-          [options]="item.options" 
-          formControlName="{{ item.name }}" 
-          optionLabel="label" 
-          placeholder="Selecciona nivel" 
-          [style]="{'width':'100%'}"
-        ></p-dropdown>
-      </div>
-    </div>
-    <hr/>
-    <div class="section">
-        <div class="section-header">
-            <h2>SOSTENIBILIDAD DEL CONSUMO EN COMEDOR</h2>
-            </div>
-      <div *ngFor="let item of comedor" class="p-field">
-        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
-        <label class="second-label" 
-        [ngStyle]="{
-          'color': labelBackgrounds[item.name] || 'black', 
-          'padding': '5px', 
-          'border-radius': '5px',
-          'font-weight': (labelBackgrounds[item.name] && labelBackgrounds[item.name] !== 'black') ? 'bold' : 'normal'
-        }"
-        >{{ item.labelsecond }}</label>
-        <p-dropdown 
-          [options]="item.options" 
-          formControlName="{{ item.name }}" 
-          optionLabel="label" 
-          placeholder="Selecciona nivel" 
-          [style]="{'width':'100%'}"
-        ></p-dropdown>
-      </div>
-    </div>
-    <hr/>
-    <div class="section">
-        <div class="section-header">
-            <h2>SOSTENIBILIDAD DE LA GESTIÓN DE RESIDUOS</h2>
-            </div>
-      <div *ngFor="let item of residuos" class="p-field">
-        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
-        <!-- Segunda etiqueta -->
-        <label class="second-label" 
-        [ngStyle]="{
-          'color': labelBackgrounds[item.name] || 'black', 
-          'padding': '5px', 
-          'border-radius': '5px',
-          'font-weight': (labelBackgrounds[item.name] && labelBackgrounds[item.name] !== 'black') ? 'bold' : 'normal'
-        }"
-        >{{ item.labelsecond }}</label>
-        <p-dropdown 
-          [options]="item.options" 
-          formControlName="{{ item.name }}" 
-          optionLabel="label" 
-          placeholder="Selecciona nivel" 
-          [style]="{'width':'100%'}"
-        ></p-dropdown>
-      </div>
-    </div>  
     <!-- <button pButton type="submit" label="Enviar" [disabled]="!sostenibilidadForm.valid"></button> -->
-  </form>
+  <!-- </form> -->
 </div>

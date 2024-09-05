@@ -1,0 +1,29 @@
+<form [formGroup]="comedorform" (ngSubmit)="onSubmit()">
+    <div class="section">
+        <div class="section-header">
+            <h2>SOSTENIBILIDAD DEL CONSUMO EN COMEDOR</h2>
+            </div>
+      <div *ngFor="let item of comedor" class="p-field">
+        <label><span style="font-weight: bold;">{{ item.label }}</span></label>
+        <!-- Segunda etiqueta -->
+        <label class="second-label" 
+        [ngStyle]="{
+            'color': getLabelBackground(item.name),
+            'padding': '5px', 
+            'border-radius': '5px',
+            'font-weight': (getLabelBackground(item.name) !== 'black') ? 'bold' : 'normal'
+          }"
+        >{{ item.labelsecond }}</label>
+        <p-dropdown 
+          [options]="item.options" 
+          formControlName="{{ item.name }}" 
+          optionLabel="label" 
+          placeholder="Selecciona nivel" 
+          [style]="{'width':'100%'}"
+        ></p-dropdown>
+      </div>
+      <div [ngStyle]="{'background-color': sostenibilidadService.getBackgroundColor(totalScore)}" class="total-puntos">
+        <h3>Total: {{totalScore}}</h3><br/> <p>{{message}}</p>
+      </div>
+    </div>
+    </form>
