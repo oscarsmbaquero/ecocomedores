@@ -55,12 +55,12 @@
     background-color: inherit; /* Match the background color to the cell */
 }
 
-/* Estilos responsive para pantallas más pequeñas */
 @media (max-width: 768px) {
     /* Ajusta las celdas específicas de "FASE" para que el texto se muestre en vertical */
     .priority-table td.phase {
         writing-mode: vertical-rl; /* Gira el texto para que se muestre en vertical */
-        transform: rotate(180deg); /* Asegura que el texto no esté al revés */
+        -webkit-writing-mode: vertical-rl; /* Para Safari */
+        /* Elimina el rotate, Safari ya maneja el texto correctamente */
         text-align: center; /* Centra el texto */
         width: 40px; /* Reduce el ancho de la columna */
         padding: 5px; /* Ajusta el padding para mejorar la presentación en móviles */
@@ -77,3 +77,4 @@
         font-size: 12px; /* Ajusta el tamaño de la fuente en los campos de texto */
     }
 }
+

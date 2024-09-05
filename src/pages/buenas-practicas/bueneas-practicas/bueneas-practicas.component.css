@@ -41,7 +41,8 @@
     /* Estilos para las celdas con 'rowspan' que contienen los textos 'FASE DE APROVISIONAMIENTO' y 'FASE DE DISTRIBUCIÓN' */
     .sustainability-table td[rowspan] {
         writing-mode: vertical-rl; /* Gira el texto para que se muestre en vertical */
-        transform: rotate(180deg); /* Asegura que el texto no esté al revés */
+        /* transform: rotate(180deg);  */
+        -webkit-writing-mode: vertical-rl; /* Para Safari */
         text-align: center; /* Centra el texto */
         width: 40px; /* Ajusta el ancho de la celda para que sea más estrecha */
         padding: 5px; /* Reduce el padding en dispositivos móviles */

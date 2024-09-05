@@ -42,7 +42,8 @@
   /* Ajusta las celdas específicas para que se hagan más pequeñas y el texto se muestre en vertical */
   .styled-table td:first-child {
     writing-mode: vertical-rl; /* Gira el texto para que se muestre en vertical */
-    transform: rotate(180deg); /* Asegura que el texto no esté al revés */
+    /* transform: rotate(180deg);  */
+    -webkit-writing-mode: vertical-rl; /* Para Safari */
     text-align: center; /* Centra el texto */
     width: 30px; /* Ajusta el ancho de la celda */
     padding: 10px; /* Reduce el padding en dispositivos móviles */
