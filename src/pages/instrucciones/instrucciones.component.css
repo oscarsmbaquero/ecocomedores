@@ -1,3 +1,7 @@
+.table-container {
+  overflow-x: auto; /* Permite el scroll horizontal */
+  margin: 20px 0;   /* Ajusta el margen */
+}
 .styled-table {
   width: 100%;
   border-collapse: collapse;
@@ -33,15 +37,11 @@
 }
 
 /* Estilos responsive para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .styled-table thead {
-    display: none; /* Oculta el encabezado de la tabla */
-  }
 
-  .styled-table,
-  .styled-table tbody,
-  .styled-table tr,
-  .styled-table td {
-    display: block;
+/* Estilos responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .styled-table {
+    width: 100%;
+    display: table;
   }
 }
