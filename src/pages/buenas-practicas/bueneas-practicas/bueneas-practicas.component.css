@@ -36,19 +36,21 @@
     list-style-type: disc;
 }
 
-/* Responsividad para dispositivos móviles */
+/* Estilos responsive para pantallas más pequeñas */
 @media (max-width: 768px) {
-    .sustainability-table, .sustainability-table thead, .sustainability-table tbody, .sustainability-table th, .sustainability-table td, .sustainability-table tr {
-        display: block;
+    /* Ajusta las celdas específicas para que se hagan más pequeñas y el texto se muestre en vertical */
+    .sustainability-table td[rowspan] {
+        writing-mode: vertical-rl; /* Gira el texto para que se muestre en vertical */
+        transform: rotate(180deg); /* Asegura que el texto no esté al revés */
+        text-align: center; /* Centra el texto */
+        width: 30px; /* Ajusta el ancho de la celda */
+        padding: 10px; /* Reduce el padding en dispositivos móviles */
+        font-size: 18px; /* Reduce el tamaño de la fuente */
+        color: white;
     }
     
-    .sustainability-table th, .sustainability-table td {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .sustainability-table tr {
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
+    /* Ajusta el tamaño de la fuente para el resto de las celdas en pantallas pequeñas */
+    .sustainability-table td, .sustainability-table th {
+        font-size: 14px; /* Reduce el tamaño de la fuente en general */
     }
 }
