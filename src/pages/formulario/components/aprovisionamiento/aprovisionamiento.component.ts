@@ -40,11 +40,7 @@ export class AprovisionamientoComponent {
     );
   }
   onDropdownChange(name: string, value: any): void {
-    this.sostenibilidadService.onDropdownChange(
-      this.aprovisionamiento,
-      name,
-      value,
-      (newTotalScore: number) => {
+    this.sostenibilidadService.onDropdownChange( this.aprovisionamiento, name, value, (newTotalScore: number) => {
         this.totalScore = newTotalScore;
         this.message = this.sostenibilidadService.writeMessage(this.totalScore);
         this.totalScoreChange.emit({ source: 'aprovisionamiento', score: this.totalScore });
