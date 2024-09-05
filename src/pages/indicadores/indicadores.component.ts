@@ -57,4 +57,24 @@ export class IndicadoresComponent {
     { indicator: 'PLANES DE COMPOSTAJE', notes: 'Búsqueda del cierre de ciclos en nutrientes en proyectos de cercanía', page: 84 },
     { indicator: 'PRODUCTOS DE LIMPIEZA EMPLEADOS', notes: 'Con atención en su toxicidad para la salud de las personas y para el medio ambiente', page: 85 }
   ];
+
+  downloadPdf(tipo: string) {
+
+    let pdfUrl = '';
+    let nameDownload = ';'
+
+    if (tipo === 'respaldo'){
+      pdfUrl = 'assets/pdf/informe_respaldo'; 
+      nameDownload = "informe de respaldo.pdf"
+    }else{
+       pdfUrl = 'assets/pdf/informe_completo.pdf'; 
+       nameDownload = "informe completo.pdf"
+    }    
+
+    // Crear un enlace temporal para descargar el PDF
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = nameDownload; // Nombre del archivo que se descargará
+    link.click();
+  }
 }
