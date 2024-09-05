@@ -38,19 +38,20 @@
 
 /* Estilos responsive para pantallas más pequeñas */
 @media (max-width: 768px) {
-    /* Ajusta las celdas específicas para que se hagan más pequeñas y el texto se muestre en vertical */
+    /* Estilos para las celdas con 'rowspan' que contienen los textos 'FASE DE APROVISIONAMIENTO' y 'FASE DE DISTRIBUCIÓN' */
     .sustainability-table td[rowspan] {
         writing-mode: vertical-rl; /* Gira el texto para que se muestre en vertical */
         transform: rotate(180deg); /* Asegura que el texto no esté al revés */
         text-align: center; /* Centra el texto */
-        width: 30px; /* Ajusta el ancho de la celda */
-        padding: 10px; /* Reduce el padding en dispositivos móviles */
+        width: 40px; /* Ajusta el ancho de la celda para que sea más estrecha */
+        padding: 5px; /* Reduce el padding en dispositivos móviles */
         font-size: 18px; /* Reduce el tamaño de la fuente */
-        color: white;
+        background-color: white; /* Asegura el fondo blanco */
+        color:white;
     }
     
     /* Ajusta el tamaño de la fuente para el resto de las celdas en pantallas pequeñas */
     .sustainability-table td, .sustainability-table th {
-        font-size: 14px; /* Reduce el tamaño de la fuente en general */
+        font-size: 12px; /* Reduce el tamaño de la fuente en general */
     }
 }
