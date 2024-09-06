@@ -7,31 +7,31 @@ export const aprovisionamiento = [
       {
         label: 'Ningún alimento certificado como ecológico en el menú',
         value: 'nivel1',
-        score: 4,
+        score: 3,
       },
       {
         label:
           'Al menos el 5% de los alimentos del menú tienen certificado de producción ecológica',
         value: 'nivel2',
-        score: 8,
+        score: 5,
       },
       {
         label:
           'Al menos el 20% de los alimentos del menú tienen certificado de producción ecológica',
         value: 'nivel3',
-        score: 12,
+        score: 8,
       },
       {
         label:
           'Al menos el 35% de los alimentos del menú tienen certificado ecológico',
         value: 'nivel4',
-        score: 16,
+        score: 10,
       },
       {
         label:
           'Más del 50% de los alimentos certificados como ecológicos en el menú',
         value: 'nivel5',
-        score: 20,
+        score: 13,
       },
     ],
   },
@@ -45,31 +45,31 @@ export const aprovisionamiento = [
         label:
           'Ningún producto animal utilizado en el menú procede de ganadería extensiva',
         value: 'nivel1',
-        score: 4,
+        score: 3,
       },
       {
         label:
           'Al menos el 5% de los productos animales proceden de ganadería extensiva',
         value: 'nivel2',
-        score: 8,
+        score: 5,
       },
       {
         label:
           'Al menos el 20% de los productos animales proceden de ganadería extensiva',
         value: 'nivel3',
-        score: 12,
+        score: 8,
       },
       {
         label:
           'Al menos el 35% de los productos animales proceden de ganadería extensiva',
         value: 'nivel4',
-        score: 16,
+        score: 10,
       },
       {
         label:
           'Más del 50% de los productos animales utilizados en el menú proceden de ganadería extensiva',
         value: 'nivel5',
-        score: 20,
+        score: 13,
       },
     ],
   },
@@ -82,31 +82,31 @@ export const aprovisionamiento = [
         label:
           'Ningún pescado utilizado en el menú está asociado a algún certificado de calidad',
         value: 'nivel1',
-        score: 4,
+        score: 3,
       },
       {
         label:
           'Al menos el 5% de los pescados servidos en el menú tienen algún certificado de calidad',
         value: 'nivel2',
-        score: 8,
+        score: 5,
       },
       {
         label:
           'Al menos el 20% de los pescados del menú tienen algún certificado de calidad',
         value: 'nivel3',
-        score: 12,
+        score: 8,
       },
       {
         label:
           'Al menos el 35% de los pescados del menú tienen algún certificado de calidad',
         value: 'nivel4',
-        score: 16,
+        score: 10,
       },
       {
         label:
           'Más del 50% del pescado utilizado en el menú está asociado a algún certificado de calidad',
         value: 'nivel5',
-        score: 20,
+        score: 13,
       },
     ],
   },
@@ -120,31 +120,31 @@ export const aprovisionamiento = [
         label:
           'Ningún producto utilizado en el menú proviene del comercio justo o de alguna iniciativa cooperativa',
         value: 'nivel1',
-        score: 4,
+        score: 3,
       },
       {
         label:
           'Al menos el 5% de los productos del menú provienen de comercio justo o iniciativa cooperativa',
         value: 'nivel2',
-        score: 8,
+        score: 5,
       },
       {
         label:
           'Al menos el 20% de los productos del menú provienen de comercio justo o iniciativa cooperativa',
         value: 'nivel3',
-        score: 12,
+        score: 8,
       },
       {
         label:
           'Al menos el 35% de los productos del menú provienen de comercio justo o iniciativa cooperativa',
         value: 'nivel4',
-        score: 16,
+        score: 10,
       },
       {
         label:
           'Más del 50% de los productos utilizados en el menú provienen del comercio justo o de alguna iniciativa cooperativa',
         value: 'nivel5',
-        score: 20,
+        score: 13,
       },
     ],
   },
@@ -158,31 +158,31 @@ export const aprovisionamiento = [
         label:
           'Ningún producto utilizado en el menú está certificado con sellos DOP o IGP',
         value: 'nivel1',
-        score: 4,
+        score: 3,
       },
       {
         label:
           'Al menos el 5% de los productos del menú tienen certificado DOP o IGP',
         value: 'nivel2',
-        score: 8,
+        score: 5,
       },
       {
         label:
           'Al menos el 20% de los productos del menú tienen certificado DOP o IGP',
         value: 'nivel3',
-        score: 12,
+        score: 8,
       },
       {
         label:
           'Al menos el 35% de los productos del menú tienen certificado DOP o IGP',
         value: 'nivel4',
-        score: 16,
+        score: 10,
       },
       {
         label:
           'Más del 50% de los productos utilizados en el menú provienen de una DOP o IGP',
         value: 'nivel5',
-        score: 20,
+        score: 13,
       },
     ],
   },
@@ -195,31 +195,31 @@ export const aprovisionamiento = [
         label:
           'Todos los productos utilizados en el menú proceden de origen internacional',
         value: 'nivel1',
-        score: 4,
+        score: 3,
       },
       {
         label:
           'Al menos el 50% de los productos utilizados en el menú son nacionales o biorregionales, y el resto son internacionales',
         value: 'nivel2',
-        score: 8,
+        score: 5,
       },
       {
         label:
           'Al menos el 15% de los produtos utilizados en el menú son biorregionales y el resto son nacionales',
         value: 'nivel3',
-        score: 12,
+        score: 8,
       },
       {
         label:
           'Al menos el 25% de los productos utilizados en el menú son biorregionales y el resto son nacionales',
         value: 'nivel4',
-        score: 16,
+        score: 10,
       },
       {
         label:
           'Al menos el 50% de los productos proceden de la biorregión y el resto son de origen nacional',
         value: 'nivel5',
-        score: 20,
+        score: 13,
       },
     ],
   },
@@ -232,28 +232,28 @@ export const aprovisionamiento = [
         label:
           'Ninguna atención a la estacionalidad de los alimentos en la elaboración del menú',
         value: 'nivel1',
-        score: 4,
+        score: 3,
       },
       {
         label: 'El 25% de los alimentos que componen el menú son de temporada',
         value: 'nivel2',
-        score: 8,
+        score: 5,
       },
       {
         label: 'El 50% de los alimentos que componen el menú son de temporada',
         value: 'nivel3',
-        score: 12,
+        score: 8,
       },
       {
         label: 'El 75% de los alimentos que componen el menú son de temporada',
         value: 'nivel4',
-        score: 16,
+        score: 10,
       },
       {
         label:
           'El 100% de los alimentos que componen el menú son alimentos de temporada',
         value: 'nivel5',
-        score: 20,
+        score: 13,
       },
     ],
   },

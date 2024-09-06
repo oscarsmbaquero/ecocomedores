@@ -83,31 +83,31 @@ export const comedor = [
           label:
             'No se pone ninguna atención a la adecuación cultural de los menús',
           value: 'nivel1',
-          score: 4,
+          score: 3,
         },
         {
           label:
             'Al menos el 60% de los menús se alinean con la dieta mediterránea',
           value: 'nivel2',
-          score: 8,
+          score: 6,
         },
         {
           label:
             'Al menos el 80% de los menús se alinean con la dieta mediterránea pero sin ninguna receta propiamente extremeña',
           value: 'nivel3',
-          score: 12,
+          score: 9,
         },
         {
           label:
             'Al menos el 80% de los menús se alinean con la dieta mediterránea y al menos el 20% de ellos son recetas propiamente extremeñas ',
           value: 'nivel4',
-          score: 16,
+          score: 11,
         },
         {
           label:
             'Se cumple el escenario anterior y, además, hay un plan educativo para la puesta en valor de la gastronomía regional como patrimonio cultural',
           value: 'nivel5',
-          score: 20,
+          score: 14,
         },
       ],
     },

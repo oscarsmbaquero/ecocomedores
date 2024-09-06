@@ -45,10 +45,10 @@ export class FormService {
   private updateLabelBackground(name: string, value: string) {
     switch (value) {
       case 'nivel1':
-        this.labelBackgrounds[name] = 'red';
+        this.labelBackgrounds[name] = 'lightcoral';
         break;
       case 'nivel2':
-        this.labelBackgrounds[name] = 'orange';
+        this.labelBackgrounds[name] = 'burlywood';
         break;
       case 'nivel3':
         this.labelBackgrounds[name] = 'orange';
