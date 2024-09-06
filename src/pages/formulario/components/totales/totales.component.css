@@ -1,0 +1,33 @@
+.custom-modal {
+    position: -webkit-sticky; /* Compatibilidad con Safari */
+    position: sticky;
+    top: 0; /* Pegado a la parte superior de la ventana */
+    width: 100%; /* Ajusta al ancho completo de la ventana */
+    max-width: 100vw; /* Asegura que no sea más ancho que la ventana */
+    max-height: 50vh; /* Ajusta la altura máxima del modal */
+    background-color: white; /* Fondo blanco para el modal */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para el efecto modal */
+    z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados opcional */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    text-align: center; /* Centrar el texto dentro del modal */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es mayor que la altura máxima */
+  }
+  
+  .modal-content {
+    max-width: 1200px; /* Ancho máximo del contenido del modal */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+  }
+
+  .high-score {
+    background-color: lightgreen; /* Color para valores altos */
+  }
+  
+  .medium-score {
+    background-color: lightyellow; /* Color para valores medios */
+  }
+  
+  .low-score {
+    background-color: lightcoral; /* Color para valores bajos */
+  }
