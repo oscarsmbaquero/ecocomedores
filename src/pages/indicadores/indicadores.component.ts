@@ -64,7 +64,7 @@ export class IndicadoresComponent {
     let nameDownload = ';'
 
     if (tipo === 'respaldo'){
-      pdfUrl = 'assets/pdf/informe_respaldo'; 
+      pdfUrl = 'assets/pdf/informe_respaldo.pdf'; 
       nameDownload = "informe de respaldo.pdf"
     }else{
        pdfUrl = 'assets/pdf/informe_completo.pdf'; 

@@ -51,4 +51,17 @@
   tbody tr:nth-child(odd) {
     background-color: #fff;
   }
+  /* //botones de descaega */
+  .descarga{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .descarga:hover {
+    transform: scale(1.1);
+    background-color:rgba(63, 163, 63, 0.5);
+  }
   
+  .sdescarga:active {
+    transform: scale(1.15);
+    background-color:rgba(63, 163, 63, 0.5);
+  }
