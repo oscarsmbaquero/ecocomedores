@@ -1,80 +1,79 @@
 .priority-table-container {
-    width: 100%;
-    overflow-x: auto;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .priority-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .priority-table th,
 .priority-table td {
-    border: 2px solid #000066;
-    padding: 10px;
-    text-align: center;
+  border: 2px solid #000066;
+  padding: 10px;
+  text-align: center;
 }
 
 .priority-table th {
-    background-color: #0055a5;
-    color: white;
-    font-weight: normal;
+  background-color: #0055a5;
+  color: white;
+  font-weight: normal;
 }
 
 .phase {
-    background-color: #0055a5;
-    color: white;
-    text-align: left;
-    padding-left: 10px;
-    vertical-align: middle;
+  background-color: #0055a5;
+  color: white;
+  text-align: left;
+  padding-left: 10px;
+  vertical-align: middle;
 }
 
 .eliminate {
-    background-color: #ff8a45;
-    font-weight: bold;
+  background-color: #ff8a45;
+  font-weight: bold;
 }
 
 .reduce {
-    background-color: #ffcc32;
-    font-weight: bold;
+  background-color: #ffcc32;
+  font-weight: bold;
 }
 
 .incorporate {
-    background-color: #5cbf5c;
-    font-weight: bold;
+  background-color: #5cbf5c;
+  font-weight: bold;
 }
 
 .priority-table input[type="text"] {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
-    border: none;
-    padding: 10px; /* Adjust padding as needed for input text */
-    text-align: center;
-    font-size: 14px;
-    background-color: inherit; /* Match the background color to the cell */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+  border: none;
+  padding: 10px; /* Adjust padding as needed for input text */
+  text-align: center;
+  font-size: 14px;
+  background-color: inherit; /* Match the background color to the cell */
 }
 
 @media (max-width: 768px) {
-    /* Ajusta las celdas específicas de "FASE" para que el texto se muestre en vertical */
-    .priority-table td.phase {
-        writing-mode: vertical-rl; /* Gira el texto para que se muestre en vertical */
-        -webkit-writing-mode: vertical-rl; /* Para Safari */
-        /* Elimina el rotate, Safari ya maneja el texto correctamente */
-        text-align: center; /* Centra el texto */
-        width: 40px; /* Reduce el ancho de la columna */
-        padding: 5px; /* Ajusta el padding para mejorar la presentación en móviles */
-        font-size: 12px; /* Reduce el tamaño de la fuente */
-    }
-    
-    /* Ajusta el tamaño de la fuente para el resto de las celdas en pantallas pequeñas */
-    .priority-table th,
-    .priority-table td {
-        font-size: 12px; /* Reduce el tamaño de la fuente en general */
-    }
+  /* Ajusta las celdas específicas de "FASE" para que el texto se muestre en vertical */
+  .priority-table td.phase {
+    writing-mode: vertical-lr; /* Gira el texto para que se muestre en vertical */
+    transform: rotate(180deg);
+    -webkit-writing-mode: vertical-lr; /* Para Safari */
+    text-align: center; /* Centra el texto */
+    width: 40px; /* Reduce el ancho de la columna */
+    padding: 5px; /* Ajusta el padding para mejorar la presentación en móviles */
+    font-size: 12px; /* Reduce el tamaño de la fuente */
+  }
 
-    .priority-table input[type="text"] {
-        font-size: 12px; /* Ajusta el tamaño de la fuente en los campos de texto */
-    }
+  /* Ajusta el tamaño de la fuente para el resto de las celdas en pantallas pequeñas */
+  .priority-table th,
+  .priority-table td {
+    font-size: 12px; /* Reduce el tamaño de la fuente en general */
+  }
+
+  .priority-table input[type="text"] {
+    font-size: 12px; /* Ajusta el tamaño de la fuente en los campos de texto */
+  }
 }
-
