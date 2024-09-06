@@ -16,6 +16,7 @@ import { CocinaComponent } from './components/cocina/cocina.component';
 import { ComedorComponent } from "./components/comedor/comedor.component";
 import { FormService } from '../../core/services/form.service';
 import { ResiduosComponent } from "./components/residuos/residuos.component";
+import { TotalesComponent } from './components/totales/totales.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { AprovisionamientoComponent } from './components/aprovisionamiento/aprovisionamiento.component';
 @Component({
@@ -23,7 +24,7 @@ import { ResiduosComponent } from "./components/residuos/residuos.component";
   standalone: true,
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'],
-  imports: [CommonModule, ReactiveFormsModule, DropdownModule, ButtonModule, AprovisionamientoComponent, DistribucionComponent, ComedorComponent, CocinaComponent, ResiduosComponent]
+  imports: [CommonModule, ReactiveFormsModule, TotalesComponent ,DropdownModule, ButtonModule, AprovisionamientoComponent, DistribucionComponent, ComedorComponent, CocinaComponent, ResiduosComponent]
 })
 export class FormularioComponent implements OnInit {
   sostenibilidadForm!: FormGroup;
@@ -42,6 +43,7 @@ export class FormularioComponent implements OnInit {
   // fieldScores: { [key: string]: number } = {};
 
    totalScores: { [key: string]: number } = {};
+  showTotales!: boolean 
 
   
   
@@ -75,6 +77,10 @@ export class FormularioComponent implements OnInit {
 
     // Ahora puedes manejar los scores individualmente o en conjunto
     console.log('Scores actuales:', this.totalScore);
+    if(this.totalScore > 0){
+      this.showTotales = true;
+
+    }
   }
 /**
    * Inicializar distribucion

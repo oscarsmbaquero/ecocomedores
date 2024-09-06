@@ -1,27 +1,23 @@
+<app-totales [visible]="showTotales" [total]="totalScore"></app-totales>
 <div class="card">
   <!-- <form [formGroup]="sostenibilidadForm" (ngSubmit)="onSubmit()"> -->
-    <app-aprovisionamiento
-      (totalScoreChange)="handleTotalScoreChange($event)"
-    ></app-aprovisionamiento>
-    <hr />
-    <app-distribucion
-      (totalScoreChange)="handleTotalScoreChange($event)"
-    ></app-distribucion>
-    <hr />
-    <app-cocina
-      (totalScoreChange)="handleTotalScoreChange($event)"
-    ></app-cocina>
-    <hr />
-    <app-comedor
-      (totalScoreChange)="handleTotalScoreChange($event)"
-    ></app-comedor>
-    <hr />
-    <app-residuos
-      (totalScoreChange)="handleTotalScoreChange($event)"
-    ></app-residuos>
-    <div class="total-puntos">
-      <h3>Media: {{totalScore}}</h3><br/>
-    </div>
-    <!-- <button pButton type="submit" label="Enviar" [disabled]="!sostenibilidadForm.valid"></button> -->
+  <app-aprovisionamiento
+    (totalScoreChange)="handleTotalScoreChange($event)"
+  ></app-aprovisionamiento>
+  <hr />
+  <app-distribucion
+    (totalScoreChange)="handleTotalScoreChange($event)"
+  ></app-distribucion>
+  <hr />
+  <app-cocina (totalScoreChange)="handleTotalScoreChange($event)"></app-cocina>
+  <hr />
+  <app-comedor
+    (totalScoreChange)="handleTotalScoreChange($event)"
+  ></app-comedor>
+  <hr />
+  <app-residuos
+    (totalScoreChange)="handleTotalScoreChange($event)"
+  ></app-residuos>
+  <!-- <button pButton type="submit" label="Enviar" [disabled]="!sostenibilidadForm.valid"></button> -->
   <!-- </form> -->
 </div>
