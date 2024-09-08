@@ -20,8 +20,9 @@ export class CocinaComponent {
 
   message: string = '';
   totalScore = 0;
-  labelBackgrounds: { [key: string]: string } = {};
-  fieldScores: { [key: string]: number } = {};
+  // labelBackgrounds: { [key: string]: string } = {};
+  // fieldScores: { [key: string]: number } = {};
+  totalScoresByType: { [key: string]: number } = {};
 
   constructor(
     public sostenibilidadService: FormService,
@@ -33,15 +34,16 @@ export class CocinaComponent {
     this.sostenibilidadService.initFormControls(
       this.cocinaform,
       this.cocina,
-      this.onDropdownChange.bind(this)
+      (name: string, value: any) => this.onDropdownChange(name, value, 'cocina') // Define el tipo aquí
     );
   }
 
-  onDropdownChange(name: string, value: any): void {
+  onDropdownChange(name: string, value: any,  type: string): void {
     this.sostenibilidadService.onDropdownChange(
       this.cocina,
       name,
       value,
+      type,
       (newTotalScore: number) => {
         this.totalScore = newTotalScore;
         this.message = this.sostenibilidadService.writeMessage(this.totalScore);

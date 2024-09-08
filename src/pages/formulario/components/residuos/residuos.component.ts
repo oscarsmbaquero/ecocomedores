@@ -17,6 +17,7 @@ export class ResiduosComponent {
   @Output() totalScoreChange = new EventEmitter<{ source: string, score: number }>();
   residuosform! : FormGroup;
   residuos = residuos;
+  totalScoresByType: { [key: string]: number } = {};
 
   message: string = '';
   totalScore = 0;
@@ -33,15 +34,16 @@ export class ResiduosComponent {
     this.sostenibilidadService.initFormControls(
       this.residuosform,
       this.residuos,
-      this.onDropdownChange.bind(this)
+      (name: string, value: any) => this.onDropdownChange(name, value, 'residuos') // Define el tipo aquí
     );
   }
 
-  onDropdownChange(name: string, value: any): void {
+  onDropdownChange(name: string, value: any, type: string): void {
     this.sostenibilidadService.onDropdownChange(
       this.residuos,
       name,
       value,
+      type, // Pasa el tipo al servicio
       (newTotalScore: number) => {
         this.totalScore = newTotalScore;
         this.message = this.sostenibilidadService.writeMessage(this.totalScore);

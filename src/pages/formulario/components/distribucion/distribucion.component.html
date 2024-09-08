@@ -1,7 +1,11 @@
 <form [formGroup]="distribucionform" (ngSubmit)="onSubmit()">
     <div class="section">
-        <div class="section-header">
-          <h2>SOSTENIBILIDAD DE LA DISTRIBUCIÓN&nbsp;:&nbsp;{{totalScore}}*</h2>
+        <div
+        [ngStyle]="{'background-color': sostenibilidadService.getBackgroundColor(totalScore)}" class="section-header"
+        >
+          <h2>SOSTENIBILIDAD DE LA DISTRIBUCIÓN</h2>
+           <h3 *ngIf="totalScore > 0">*{{totalScore}} PUNTOS*</h3>            
+            <p>{{message}}</p>
         </div>
         <div *ngFor="let item of distribucion" class="p-field">
           <!-- Primera etiqueta -->
@@ -24,8 +28,8 @@
             [style]="{'width':'100%'}"
           ></p-dropdown>
         </div>
-        <div  *ngIf="totalScore > 0" [ngStyle]="{'background-color': sostenibilidadService.getBackgroundColor(totalScore)}" class="total-puntos">
+        <!-- <div  *ngIf="totalScore > 0" [ngStyle]="{'background-color': sostenibilidadService.getBackgroundColor(totalScore)}" class="total-puntos">
           <h3>Total: {{totalScore}}</h3><br/> <p>{{message}}</p>
-        </div>
+        </div> -->
       </div>
     </form>

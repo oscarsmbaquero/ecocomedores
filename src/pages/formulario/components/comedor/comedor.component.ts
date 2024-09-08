@@ -22,6 +22,7 @@ export class ComedorComponent {
   totalScore = 0;
   labelBackgrounds: { [key: string]: string } = {};
   fieldScores: { [key: string]: number } = {};
+  totalScoresByType: { [key: string]: number } = {};
 
   constructor(
     public sostenibilidadService: FormService,
@@ -34,15 +35,16 @@ export class ComedorComponent {
     this.sostenibilidadService.initFormControls(
       this.comedorform,
       this.comedor,
-      this.onDropdownChange.bind(this)
+      (name: string, value: any) => this.onDropdownChange(name, value, 'aprovisionamiento') // Define el tipo aquí
     );
   }
 
-  onDropdownChange(name: string, value: any): void {
+  onDropdownChange(name: string, value: any, type: string): void {
     this.sostenibilidadService.onDropdownChange(
       this.comedor,
       name,
       value,
+      type, // Pasa el tipo al servicio
       (newTotalScore: number) => {
         this.totalScore = newTotalScore;
         this.message = this.sostenibilidadService.writeMessage(this.totalScore);

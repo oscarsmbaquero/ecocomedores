@@ -19,6 +19,7 @@ export class DistribucionComponent {
   distribucionform! : FormGroup;
 
   distribucion = distribucion;
+  totalScoresByType: { [key: string]: number } = {};
 
   message: string = '';
   totalScore = 0;
@@ -35,14 +36,15 @@ export class DistribucionComponent {
     this.sostenibilidadService.initFormControls(
       this.distribucionform,
       this.distribucion,
-      this.onDropdownChange.bind(this)
+      (name: string, value: any) => this.onDropdownChange(name, value, 'distribucion') // Define el tipo aquí
     );
   }
-  onDropdownChange(name: string, value: any): void {
+  onDropdownChange(name: string, value: any, type: string): void {
     this.sostenibilidadService.onDropdownChange(
       this.distribucion,
       name,
       value,
+      type, // Pasa el tipo al servicio
       (newTotalScore: number) => {
         this.totalScore = newTotalScore;
         this.message = this.sostenibilidadService.writeMessage(this.totalScore);

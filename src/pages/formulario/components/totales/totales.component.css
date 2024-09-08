@@ -1,7 +1,7 @@
 .custom-modal {
     position: -webkit-sticky; /* Compatibilidad con Safari */
     position: sticky;
-    top: 0; /* Pegado a la parte superior de la ventana */
+    bottom: 0; /* Pegado a la parte superior de la ventana */
     width: 100%; /* Ajusta al ancho completo de la ventana */
     max-width: 100vw; /* Asegura que no sea más ancho que la ventana */
     max-height: 50vh; /* Ajusta la altura máxima del modal */
