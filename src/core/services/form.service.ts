@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FormService {
   private labelBackgrounds: { [key: string]: string } = {};
   private fieldScores: { [key: string]: number } = {};
+  totalScoresByType: { [key: string]: number } = {};
   private totalScore = 0;
 
   constructor(private fb: FormBuilder) {}
@@ -24,21 +25,25 @@ export class FormService {
     items: any[],
     name: string,
     value: any,
+    type: string, // Agrega el tipo como argumento
     updateScoreCallback: (totalScore: number) => void
-  ): void {    
+  ): void {
     const selectedItem = items.find(item => item.name === name);
     if (selectedItem) {
       const selectedOption = selectedItem.options.find((option: { value: any; }) => option.value === value.value);
-
+  
       if (selectedOption) {
         const newScore = selectedOption.score || 0;
         const oldScore = this.fieldScores[name] || 0;
-        this.totalScore += newScore - oldScore;
+        if (!this.totalScoresByType[type]) {
+          this.totalScoresByType[type] = 0;
+        }
+        this.totalScoresByType[type] += newScore - oldScore;
         this.fieldScores[name] = newScore;
-        updateScoreCallback(this.totalScore);
+        updateScoreCallback(this.totalScoresByType[type]);
       }
     }
-
+  
     this.updateLabelBackground(name, value.value);
   }
 
@@ -82,7 +87,12 @@ export class FormService {
   }
 
   getBackgroundColor(score: number): string {    
-    if (score < 30) {
+    
+    if(score === 0 && score < 30){
+      return 'green'
+    }else  if (score < 30) {
+      return 'red';
+    }else if (score < 30) {
       return 'red';
     } else if (score >= 30 && score < 60) {
       return 'orange';
