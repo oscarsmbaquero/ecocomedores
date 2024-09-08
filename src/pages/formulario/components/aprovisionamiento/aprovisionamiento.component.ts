@@ -50,9 +50,9 @@ export class AprovisionamientoComponent {
       value,
       type, // Pasa el tipo al servicio
       (newTotalScore: number) => {
-        this.totalScoresByType[type] = newTotalScore;
-        this.message = this.sostenibilidadService.writeMessage(newTotalScore);
-        this.totalScoreChange.emit({ source: 'aprovisionamiento', score: newTotalScore });
+        this.totalScore = newTotalScore;
+        this.message = this.sostenibilidadService.writeMessage(this.totalScore);
+        this.totalScoreChange.emit({ source: 'aprovisionamiento', score: this.totalScore });
       }
     );
   }

@@ -35,7 +35,7 @@ export class ComedorComponent {
     this.sostenibilidadService.initFormControls(
       this.comedorform,
       this.comedor,
-      (name: string, value: any) => this.onDropdownChange(name, value, 'aprovisionamiento') // Define el tipo aquí
+      (name: string, value: any) => this.onDropdownChange(name, value, 'comedor') // Define el tipo aquí
     );
   }
 
