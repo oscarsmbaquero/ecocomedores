@@ -59,7 +59,7 @@
   /* Ajusta las celdas específicas de "FASE" para que el texto se muestre en vertical */
   .priority-table td.phase {
     writing-mode: vertical-lr; /* Gira el texto para que se muestre en vertical */
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     -webkit-writing-mode: vertical-lr; /* Para Safari */
     text-align: center; /* Centra el texto */
     width: 40px; /* Reduce el ancho de la columna */

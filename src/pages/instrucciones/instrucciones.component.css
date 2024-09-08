@@ -42,7 +42,7 @@
   /* Ajusta las celdas específicas para que se hagan más pequeñas y el texto se muestre en vertical */
   .styled-table td:first-child {
     writing-mode: vertical-lr; /* Gira el texto para que se muestre en vertical */
-    transform: rotate(180deg); 
+    /* transform: rotate(180deg);  */
     -webkit-writing-mode: vertical-lr; /* Para Safari */
     text-align: center; /* Centra el texto */
     width: 30px; /* Ajusta el ancho de la celda */
