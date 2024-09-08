@@ -68,9 +68,6 @@ export class FormularioComponent implements OnInit {
     console.log(source , score);
     
     this.totalScores[source] = score;
-    console.log(this.totalScores);
-    
-    console.log(this.totalScores);
     
     // Calcula el puntaje total sumando los puntajes individuales
     this.totalScore = Object.values(this.totalScores).reduce((acc, current) => acc + current, 0)/5;
