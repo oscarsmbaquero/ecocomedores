@@ -150,7 +150,7 @@ export const aprovisionamiento = [
   },
   {
     name: 'aprovisionamiento5',
-    label: '5. DENOMINACIONES DOP/IGP   ',
+    label: '5. DENOMINACIONES DOP/IGP',
     labelsecond:
       '¿Consumís productos de comercio justo o de iniciativas de economía cooperativa?',
     options: [
@@ -266,31 +266,31 @@ export const aprovisionamiento = [
         label:
           'Cerca del 100% de los alimentos del menú son congelados, precocinados o ultraprocesado',
         value: 'nivel1',
-        score: 4,
+        score: 3,
       },
       {
         label:
           'Como máximo el 70% de los alimentos del menú son congelados, precocinados o ultraprocesados',
         value: 'nivel2',
-        score: 8,
+        score: 5,
       },
       {
         label:
           'Como máximo el 40% de los alimentos del menú son congelados, precocinados o ultraprocesados',
         value: 'nivel3',
-        score: 12,
+        score: 8,
       },
       {
         label:
           'Como máximo el 20% de los alimentos del menú son congelados, precocinados o ultraprocesados',
         value: 'nivel4',
-        score: 16,
+        score: 10,
       },
       {
         label:
           'El 100% de los alimentos que componen el menú son frescos o procedentes de conservas artesanales ',
         value: 'nivel5',
-        score: 20,
+        score: 13,
       },
     ],
   },

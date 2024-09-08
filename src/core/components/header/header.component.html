@@ -1,13 +1,13 @@
-<nav class="navbar navbar-expand-md nav">
+<nav class="navbar navbar-expand-md sticky-top nav">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['']">
+    <!-- <a class="navbar-brand" [routerLink]="['']">
       <img      
       src="../../../assets/images/logo.png"
       width="120"
       height="120"
       alt="logo"
     />&nbsp;
-    </a>
+    </a> -->
     <label
       class="hamburger navbar-toggler"
       type="button"
@@ -33,6 +33,14 @@
         ></path>
       </svg>
     </label>
+     <a class="navbar-brand" [routerLink]="['']">
+      <img      
+      src="../../../assets/images/logo.png"
+      width="60"
+      height="60"
+      alt="logo"
+    />&nbsp;
+    </a>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-md-0 navbar-nav-scroll">
         <li class="nav-item" routerLinkActive="active" 
@@ -64,7 +72,6 @@
         (click)="selectOption('hoja-ruta')">
           <a class="nav-link" [routerLink]="['hoja-ruta']"><span>Hoja de ruta</span></a>
         </li>
-        <hr class="dropdown-divider" />
       </ul>
     </div>
   </div>

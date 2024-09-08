@@ -70,7 +70,7 @@ export const cocina = [
           label:
             'Todos los equipos certificados',
           value: 'nivel5',
-          score: 15,
+          score: 14,
         },
       ],
     },

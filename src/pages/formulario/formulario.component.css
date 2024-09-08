@@ -1,5 +1,10 @@
 /* Contenedor de cada sección para que sea flexible y ocupe el ancho completo */
-
+.card{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
 .section {
   margin-bottom: 2rem;
   display: flex;
@@ -46,6 +51,10 @@ button {
 
 /* Media queries para dispositivos móviles */
 @media (max-width: 600px) {
+  .card{
+   
+    width: 90%;
+  }
   .section {
     padding: 0 1rem; /* Añade padding horizontal en pantallas pequeñas */
   }
