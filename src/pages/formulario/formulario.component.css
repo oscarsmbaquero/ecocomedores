@@ -19,10 +19,14 @@
   border-radius: 12px;
   text-align: center;
   margin-bottom: 1rem;
-  width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
+  width: 100%; 
   box-shadow: 
-  0px 4px 8px rgba(0, 128, 0, 0.5), /* Sombra exterior verde */
-  inset 0px 0px 0px 2px white; /* Línea blanca interior */
+  0px 4px 8px rgba(0, 128, 0, 0.5), 
+  inset 0px 0px 0px 2px white;
+  /*posicion sticky*/ 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000;
 }
 
 /* Campo de formulario */
@@ -70,6 +74,15 @@ button {
   button {
     font-size: 0.875rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
     padding: 0.75rem; /* Ajusta el padding del botón para pantallas pequeñas */
+  }
+  .section-header h2 {
+    font-size: 16px;
+  }
+  .section-header h3 {
+    font-size: 18px;
+  }
+  p{
+    font-size: 10px;
   }
 }
 
